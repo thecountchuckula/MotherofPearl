@@ -31,4 +31,9 @@ public class mopItem4 extends ItemArmor {
 	public String getArmorTextures(ItemStack stack, Entity entity, int slot, int layer){
 		return ModInfo.MOD_ID.toLowerCase() + ":" + "shell_1.png".substring(5);
 	}
+	@Override
+	  public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)
+	{
+	  return ModInfo.shell.itemID == par2ItemStack.itemID ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+	}
 }
