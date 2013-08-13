@@ -2,17 +2,18 @@ package tcc.MotherOfPearl.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSword;
 import tcc.MotherOfPearl.ModInfo;
 import tcc.MotherOfPearl.ModMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class mopItem7 extends Item {
+public class mopItem7 extends ItemSword {
+	
 
 	public mopItem7(int par1) {
-		super(par1);
-		// TODO Auto-generated constructor stub
-		this.setMaxStackSize(1);
+		super(par1, ModInfo.pearlKnife);
+		this.maxStackSize = 1;
 		this.setCreativeTab(ModMain.tabMoP);
 		this.setUnlocalizedName("knifePearl");
 	}

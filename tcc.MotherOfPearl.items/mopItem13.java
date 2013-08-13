@@ -13,13 +13,10 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class mopItem13 extends ItemTool {
 
-	private final EnumToolMaterial toolMaterial;
 	
 	public mopItem13(int par1) {
-		super(par1, 1.0F, ModInfo.pearlShovel, ItemSpade.blocksEffectiveAgainst);
-		this.toolMaterial = tcc.MotherOfPearl.ModInfo.pearlShovel;
+		super(par1, 0F, ModInfo.pearlShovel, ItemSpade.blocksEffectiveAgainst);
 		this.maxStackSize = 1;
-        this.setMaxDamage(64);
 		this.setCreativeTab(ModMain.tabMoP);
 		this.setUnlocalizedName("shovelPearl");
 	}

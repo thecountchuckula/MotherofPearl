@@ -64,8 +64,6 @@ public class ModInfo {
 
 	public static void initItem(){
 		blackPearl = new mopItem(ModMain.blackPearlID);
-		bowPearl = new mopItem3(ModMain.bowPearlID);
-		knifePearl = new mopItem7(ModMain.knifePearlID);
 		oyster = new mopItem9(ModMain.oysterID);
 		oysterMeat = new mopItem10(ModMain.oysterMeatID);
 		pearl = new mopItem11(ModMain.pearlID);
@@ -74,9 +72,13 @@ public class ModInfo {
 	public static EnumToolMaterial pearlShovel =
 			EnumHelper.addToolMaterial("PearlShovel", 2, 256, 2f, 3f, 25);
 	public static EnumToolMaterial pearlSword =
-			EnumHelper.addToolMaterial("PearlSword", 2, 256, 2f, 3f, 25);
+			EnumHelper.addToolMaterial("PearlSword", 2, 256, 1f, 2f, 25);
+	public static EnumToolMaterial pearlKnife =
+			EnumHelper.addToolMaterial("PearlKnife", 2, 1000, .5f, 1f, 25);
 		
 	public static void initTools(){
+		bowPearl = new mopItem3(ModMain.bowPearlID);
+		knifePearl = new mopItem7(ModMain.knifePearlID);
 		shovelPearl = new mopItem13(ModMain.shovelPearlID);
 		swordPearl = new mopItem14(ModMain.swordPearlID);
 	}
@@ -162,10 +164,10 @@ public class ModInfo {
 		//		'x', stick,
 		//		'y', pearl,
 		//		'z', string);
-		GameRegistry.addRecipe(new ItemStack(braShell, 1), 
-				"yxy", 
-				'x', string,
-				'y', shell);
+		//GameRegistry.addRecipe(new ItemStack(braShell, 1), 
+		//		"yxy", 
+		//		'x', string,
+		//		'y', shell);
 		GameRegistry.addRecipe(new ItemStack(chestplatePearl, 1), 
 				"x x", 
 				"yxy", 
@@ -195,7 +197,7 @@ public class ModInfo {
 				"yyy", 
 				'x', stone,
 				'y', oyster);
-		GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), knifePearl, oyster);
+		//GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), knifePearl, oyster);
 		GameRegistry.addRecipe(new ItemStack(shovelPearl, 1), 
 				"y", 
 				"x", 

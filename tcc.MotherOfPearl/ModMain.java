@@ -78,24 +78,24 @@ public class ModMain {
 		config.load();
 		
 		blackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearl", 5100).getInt();
-		bootsPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5101).getInt();
+		bootsPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Boots", 5101).getInt();
 		bowPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Bow", 5102).getInt();
-		braShellID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5103).getInt();
-		chestplatePearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5104).getInt();
-		helmetPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5105).getInt();
+		braShellID = config.get(Configuration.CATEGORY_ITEM, "Shell Bra", 5103).getInt();
+		chestplatePearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Chestplate", 5104).getInt();
+		helmetPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Helmet", 5105).getInt();
 		knifePearlID = config.get(Configuration.CATEGORY_ITEM, "Pearling Knife", 5106).getInt();
-		leggingsPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5107).getInt();
+		leggingsPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Leggings", 5107).getInt();
 		oysterID = config.get(Configuration.CATEGORY_ITEM, "Oyster", 5108).getInt();
 		oysterMeatID = config.get(Configuration.CATEGORY_ITEM, "Oyster Meat", 5109).getInt();
 		pearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5110).getInt();
 		shellID = config.get(Configuration.CATEGORY_ITEM, "Shell", 5111).getInt();
-		shovelPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5112).getInt();
-		swordPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl", 5113).getInt();
+		shovelPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Shovel", 5112).getInt();
+		swordPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Sword", 5113).getInt();
 		
-		pearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Pearl", 510).getInt();
-		blackPearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Pearl", 511).getInt();
-		pearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Pearl", 512).getInt();
-		blackPearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Pearl", 513).getInt();
+		pearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Pearly Stone", 510).getInt();
+		blackPearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone", 511).getInt();
+		pearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick", 512).getInt();
+		blackPearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick", 513).getInt();
 		
 		config.save();
 

@@ -28,7 +28,7 @@ public class mopItem4 extends ItemArmor {
 		this.itemIcon = reg.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 
 	}
-	private String getArmorTextures(ItemStack stack, Entity entity, int slot, int layer){
+	public String getArmorTextures(ItemStack stack, Entity entity, int slot, int layer){
 		return ModInfo.MOD_ID.toLowerCase() + ":" + "shell_1.png".substring(5);
 	}
 }

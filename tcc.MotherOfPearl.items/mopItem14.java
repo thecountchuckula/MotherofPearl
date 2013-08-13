@@ -3,20 +3,19 @@ package tcc.MotherOfPearl.items;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import tcc.MotherOfPearl.ModInfo;
 import tcc.MotherOfPearl.ModMain;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class mopItem14 extends Item {
+public class mopItem14 extends ItemSword {
 	
-	private final EnumToolMaterial toolMaterial;
 
 	public mopItem14(int par1) {
-		super(par1);
-		this.toolMaterial = tcc.MotherOfPearl.ModInfo.pearlSword;
+		super(par1, ModInfo.pearlSword);
 		this.maxStackSize = 1;
-        this.setMaxDamage(64);
 		this.setCreativeTab(ModMain.tabMoP);
 		this.setUnlocalizedName("swordPearl");
 	}
