@@ -19,12 +19,6 @@ III. figure out why the shell bra texture shows as the pearl chestplate instead.
     get the texture to work.)
 
 
----------Done---------
-
-IV. Add ability to repair using pearls in an anvil. Repair using same item (to retain enchantments) works, but I would like
-    to add a less expensive recipe
-
-
 Later TODO:
 
 V. Make block that extends clay. Make it drop 3 clay (the item) and one oyster.
@@ -34,3 +28,10 @@ V. Make block that extends clay. Make it drop 3 clay (the item) and one oyster.
 Maybe Never TODO(Maybe after everything above is done):
 
 VI. Add Underwater Cities and Floating Fishing Villages to WorldGen.
+
+
+---------Done---------
+
+IV. Add ability to repair using pearls in an anvil. Repair using same item (to retain enchantments) works, but I would like
+    to add a less expensive recipe
+
