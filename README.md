@@ -21,9 +21,7 @@ III. figure out why the shell bra texture shows as the pearl chestplate instead.
 
 Later TODO:
 
-V. Make block that extends clay. Make it drop 3 clay (the item) and one oyster.
-      OR
-   Make a new entity "Oyster" that drops the item "oyster" when broken.
+
 
 Maybe Never TODO(Maybe after everything above is done):
 
@@ -35,3 +33,8 @@ VI. Add Underwater Cities and Floating Fishing Villages to WorldGen.
 IV. Add ability to repair using pearls in an anvil. Repair using same item (to retain enchantments) works, but I would like
     to add a less expensive recipe
 
+V. (Make block that extends clay. Make it drop 3 clay (the item) and one oyster.
+      OR
+   Make a new entity "Oyster" that drops the item "oyster" when broken.)
+   
+   Finally added a clayOyster block that drops 4 oysters. Now to add it to the worldgen for clay.
