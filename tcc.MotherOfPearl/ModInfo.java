@@ -12,6 +12,7 @@ import tcc.MotherOfPearl.blocks.mopBlock;
 import tcc.MotherOfPearl.blocks.mopBlock2;
 import tcc.MotherOfPearl.blocks.mopBlock3;
 import tcc.MotherOfPearl.blocks.mopBlock4;
+import tcc.MotherOfPearl.blocks.mopBlock5;
 import tcc.MotherOfPearl.items.mopItem;
 import tcc.MotherOfPearl.items.mopItem10;
 import tcc.MotherOfPearl.items.mopItem11;
@@ -53,6 +54,7 @@ public class ModInfo {
 	public static Block blackPearlstone;
 	public static Block pearlstoneBrick;
 	public static Block blackPearlstoneBrick;
+	public static Block clayOyster;
 	
 		
 	public static final ItemStack inkSac = new ItemStack(Item.dyePowder, 1, 0);
@@ -113,6 +115,12 @@ public class ModInfo {
 		blackPearlstoneBrick = new mopBlock4(ModMain.blackPearlstoneBrickID, Material.rock);
 		MinecraftForge.setBlockHarvestLevel(blackPearlstoneBrick, "Pickaxe", 2);
 		GameRegistry.registerBlock(blackPearlstoneBrick, "blackPearlstoneBrick");
+
+		clayOyster = new mopBlock5(ModMain.clayOysterID, Material.clay);
+		MinecraftForge.setBlockHarvestLevel(clayOyster, "Shovel", 0);
+		GameRegistry.registerBlock(clayOyster, "clayOyster");
+		
+		GameRegistry.registerWorldGenerator(new tcc.MotherOfPearl.blockWorldgen());
 	}
 	
 	public static void languageRegistry() {
@@ -134,6 +142,7 @@ public class ModInfo {
 		LanguageRegistry.addName(blackPearlstone, "Black Pearly Stone");
 		LanguageRegistry.addName(pearlstoneBrick, "Pearly Stone Brick");
 		LanguageRegistry.addName(blackPearlstoneBrick, "Black Pearly Stone Brick");
+		LanguageRegistry.addName(clayOyster, "Oyster Yielding Clay");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.MoP", "en_US", "Mother of Pearl");
 		LanguageRegistry.instance().addStringLocalization("itemGroup.MoP_WIP", "en_US", "Mother of Pearl - Unfinished Items");
 	}
@@ -197,7 +206,7 @@ public class ModInfo {
 				"yyy", 
 				'x', stone,
 				'y', oyster);
-		//GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), knifePearl, oyster);
+		GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), knifePearl, oyster);
 		GameRegistry.addRecipe(new ItemStack(shovelPearl, 1), 
 				"y", 
 				"x", 

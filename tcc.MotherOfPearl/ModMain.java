@@ -67,6 +67,7 @@ public class ModMain {
 	static int blackPearlstoneID;
 	static int pearlstoneBrickID;
 	static int blackPearlstoneBrickID;
+	static int clayOysterID;
 	
 	@SidedProxy(clientSide = ModInfo.PROXY_PATH + ".ClientProxy", serverSide = ModInfo.PROXY_PATH
 			+ ".CommonProxy")
@@ -96,6 +97,7 @@ public class ModMain {
 		blackPearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone", 511).getInt();
 		pearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick", 512).getInt();
 		blackPearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick", 513).getInt();
+		clayOysterID = config.get(Configuration.CATEGORY_BLOCK, "Oyster Yielding Clay", 514).getInt();
 		
 		config.save();
 
@@ -105,7 +107,7 @@ public class ModMain {
 		ModInfo.initBlock();
 		ModInfo.languageRegistry();
 		ModInfo.crafting();
-
+		
 	}
 
 	@EventHandler
