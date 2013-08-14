@@ -23,7 +23,7 @@ public class mopBlock5 extends Block {
 	@Override
 	public void registerIcons(IconRegister reg)
 	{
-		this.blockIcon = reg.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = reg.registerIcon("minecraft:clay");
 	}
     /**
      * Returns the ID of the items to drop on destruction.
