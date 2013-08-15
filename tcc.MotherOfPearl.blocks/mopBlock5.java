@@ -28,9 +28,21 @@ public class mopBlock5 extends Block {
     /**
      * Returns the ID of the items to drop on destruction.
      */
+	
+	/*The website
+	 * http://www.minecraftforum.net/topic/1329625-help-making-a-block-drop-different-items-based-on-chance/
+	 * to help me with random chance at dropping clay or oysters.*/
 	public int idDropped(int par1, Random par2Random, int par3)
     {
-        return ModInfo.oyster.itemID;
+		int quickvar = par2Random.nextInt(25) + 1;
+		if(quickvar <= 1)
+		{
+			return ModInfo.oyster.itemID;
+		}
+		else
+		{
+			return Item.clay.itemID;
+		}
     }
 
     /**

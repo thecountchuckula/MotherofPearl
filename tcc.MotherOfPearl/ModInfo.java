@@ -1,6 +1,7 @@
 package tcc.MotherOfPearl;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockClay;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.EnumToolMaterial;
@@ -120,7 +121,6 @@ public class ModInfo {
 		MinecraftForge.setBlockHarvestLevel(clayOyster, "Shovel", 0);
 		GameRegistry.registerBlock(clayOyster, "clayOyster");
 		
-		GameRegistry.registerWorldGenerator(new tcc.MotherOfPearl.blockWorldgen());
 	}
 	
 	public static void languageRegistry() {

@@ -1,5 +1,6 @@
 package tcc.MotherOfPearl;
 
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
@@ -107,7 +108,10 @@ public class ModMain {
 		ModInfo.initBlock();
 		ModInfo.languageRegistry();
 		ModInfo.crafting();
-		
+/*	darkevilmac pointed me to the website
+ * 	http://www.minecraftforum.net/topic/1578638-forge-how-to-edit-vanilla-block-properties/
+ * 	to help me replace clayGen in the world.*/
+		Block.blocksList[Block.blockClay.blockID] = ModInfo.clayOyster;
 	}
 
 	@EventHandler

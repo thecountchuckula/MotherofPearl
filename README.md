@@ -38,3 +38,5 @@ V. (Make block that extends clay. Make it drop 3 clay (the item) and one oyster.
    Make a new entity "Oyster" that drops the item "oyster" when broken.)
    
    Finally added a clayOyster block that drops 4 oysters. Now to add it to the worldgen for clay.
+   
+   UPDATE: Replaced worldGen for clay with my block, then added 4% chance to drop oysters instead of item.clay.
