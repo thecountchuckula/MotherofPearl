@@ -173,10 +173,10 @@ public class ModInfo {
 		//		'x', stick,
 		//		'y', pearl,
 		//		'z', string);
-		//GameRegistry.addRecipe(new ItemStack(braShell, 1), 
-		//		"yxy", 
-		//		'x', string,
-		//		'y', shell);
+		GameRegistry.addRecipe(new ItemStack(braShell, 1), 
+				"yxy", 
+				'x', string,
+				'y', shell);
 		GameRegistry.addRecipe(new ItemStack(chestplatePearl, 1), 
 				"x x", 
 				"yxy", 
@@ -206,7 +206,7 @@ public class ModInfo {
 				"yyy", 
 				'x', stone,
 				'y', oyster);
-		GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), knifePearl, oyster);
+		GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), oyster);
 		GameRegistry.addRecipe(new ItemStack(shovelPearl, 1), 
 				"y", 
 				"x", 
