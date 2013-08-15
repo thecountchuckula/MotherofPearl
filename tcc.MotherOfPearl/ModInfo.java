@@ -118,7 +118,7 @@ public class ModInfo {
 		GameRegistry.registerBlock(blackPearlstoneBrick, "blackPearlstoneBrick");
 
 		clayOyster = new mopBlock5(ModMain.clayOysterID, Material.clay);
-		MinecraftForge.setBlockHarvestLevel(clayOyster, "Shovel", 0);
+		MinecraftForge.setBlockHarvestLevel(clayOyster, "Shovel", 1);
 		GameRegistry.registerBlock(clayOyster, "clayOyster");
 		
 	}
