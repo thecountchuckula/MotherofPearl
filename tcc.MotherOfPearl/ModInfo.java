@@ -68,7 +68,7 @@ public class ModInfo {
 	public static void initItem(){
 		blackPearl = new mopItem(ModMain.blackPearlID);
 		oyster = new mopItem9(ModMain.oysterID);
-		oysterMeat = new mopItem10(ModMain.oysterMeatID);
+		oysterMeat = new mopItem10(ModMain.oysterMeatID, true, 4);
 		pearl = new mopItem11(ModMain.pearlID);
 		shell = new mopItem12(ModMain.shellID);
 	}
