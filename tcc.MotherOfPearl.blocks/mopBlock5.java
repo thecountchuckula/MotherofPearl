@@ -16,7 +16,7 @@ public class mopBlock5 extends Block {
 		super(par1, par2Material);
 		// TODO Auto-generated constructor stub
 		this.setUnlocalizedName("clayOyster");
-		this.setCreativeTab(ModMain.tabMoP_WIP);
+		this.setCreativeTab(ModMain.tabMoP);
 		this.setStepSound(Block.blockClay.stepSound);
 	}
 

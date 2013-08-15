@@ -28,8 +28,8 @@ public class mopItem6 extends ItemArmor {
 		this.itemIcon = reg.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 
 	}
-	public String getArmorTextures(ItemStack stack, Entity entity, int slot, int layer){
-		return ModInfo.MOD_ID.toLowerCase() + ":" + "pearl_1.png".substring(5);
+	public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer){
+		return ModInfo.MOD_ID.toLowerCase() + ":" + "pearl_1.png";
 	}
 	@Override
 	  public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack)

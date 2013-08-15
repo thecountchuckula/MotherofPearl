@@ -13,15 +13,6 @@ I. Fix bow drawing animation (texture array?)
 
 II. make recipe for shells not use an entire pearling knife, but only cause damage to knife.
 
-III. figure out why the shell bra texture shows as the pearl chestplate instead. (texture points to shell_1, not pearl_1)
-    (I even filled in the rest of the texture file with other armor types instead of transparency... Also created a shell_2
-    file for "ghost" leggings. Still the shell bra takes on the Pearl Chestplate texture. I might just scrap it if I can't
-    get the texture to work.)
-
-
-Later TODO:
-
-
 
 Maybe Never TODO(Maybe after everything above is done):
 
@@ -29,7 +20,18 @@ VI. Add Underwater Cities and Floating Fishing Villages to WorldGen.
 
 
 ---------Done---------
-
+III. figure out why the shell bra texture shows as the pearl chestplate instead. (texture points to shell_1, not pearl_1)
+    (I even filled in the rest of the texture file with other armor types instead of transparency... Also created a shell_2
+    file for "ghost" leggings. Still the shell bra takes on the Pearl Chestplate texture. I might just scrap it if I can't
+    get the texture to work.)
+	
+	Sweet! I fixed the texture.
+	
+	Where I needed "public String getArmorTexture(blah blah blah..." I instead put "public String getArmorTextures(blah blah blah..."
+	
+	See the difference? It took me a week and a half to see the problem.
+	I figured it out when I visited http://www.minecraftforum.net/topic/1897284-162-forge-custom-armor-texture-wont-load/ though I'm not sure how I screwed that in the first place.
+	
 IV. Add ability to repair using pearls in an anvil. Repair using same item (to retain enchantments) works, but I would like
     to add a less expensive recipe
 

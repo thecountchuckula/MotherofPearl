@@ -1,6 +1,11 @@
 package tcc.MotherOfPearl.items;
 
+import tcc.MotherOfPearl.ModInfo;
+import tcc.MotherOfPearl.ModMain;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -11,27 +16,27 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
+
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
-import tcc.MotherOfPearl.ModInfo;
-import tcc.MotherOfPearl.ModMain;
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 
-public class mopItem3 extends ItemBow {
-    public static final String[] bowPullIconNameArray = new String[] {"_pull_0", "_pull_1", "_pull_2"};
+public class mopItem3 extends ItemBow
+{
+
+	public static final String[] bowPullIconNameArray = new String[] {"pulling_0", "pulling_1", "pulling_2"};
     @SideOnly(Side.CLIENT)
     private Icon[] iconArray;
 
-	public mopItem3(int par1) {
+    public mopItem3(int par1)
+    {
         super(par1);
         this.maxStackSize = 1;
-        this.setMaxDamage(384);
-		this.setCreativeTab(ModMain.tabMoP_WIP);
-		this.setUnlocalizedName("bowPearl");
-	}
-	
+        //Lasts longer
+        this.setMaxDamage(512);
+        this.setCreativeTab(ModMain.tabMoP_WIP);
+        this.setUnlocalizedName("bowPearl");
+    }
 
     /**
      * called when the player releases the use item button. Args: itemstack, world, entityplayer, itemInUseCount
@@ -156,18 +161,21 @@ public class mopItem3 extends ItemBow {
      */
     public int getItemEnchantability()
     {
-        return 1;
+        return 10;
     }
-
+    
+    
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister)
     {
-        this.itemIcon = par1IconRegister.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
+        this.itemIcon = par1IconRegister.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + 
+        		this.getUnlocalizedName().substring(5) + "_standby");
         this.iconArray = new Icon[bowPullIconNameArray.length];
 
         for (int i = 0; i < this.iconArray.length; ++i)
         {
-            this.iconArray[i] = par1IconRegister.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5) + bowPullIconNameArray[i]);
+            this.iconArray[i] = par1IconRegister.registerIcon(ModInfo.MOD_ID.toLowerCase() + ":" + 
+            		this.getUnlocalizedName().substring(5) + "_" + bowPullIconNameArray[i]);
         }
     }
 
@@ -180,5 +188,4 @@ public class mopItem3 extends ItemBow {
     {
         return this.iconArray[par1];
     }
-
 }
