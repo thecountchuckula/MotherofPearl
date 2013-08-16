@@ -69,6 +69,16 @@ public class ModMain {
 	static int pearlstoneBrickID;
 	static int blackPearlstoneBrickID;
 	static int clayOysterID;
+	static int bootsBlackPearlID;
+	static int chestplateBlackPearlID;
+	static int helmetBlackPearlID;
+	static int leggingsBlackPearlID;
+	static int skirtGrassID;
+	static int shovelBlackPearlID;
+	static int swordBlackPearlID;
+	static int crownShellID;
+	static int hempSandalsID;
+
 	
 	@SidedProxy(clientSide = ModInfo.PROXY_PATH + ".ClientProxy", serverSide = ModInfo.PROXY_PATH
 			+ ".CommonProxy")
@@ -78,7 +88,7 @@ public class ModMain {
 	public static void preInit(FMLPreInitializationEvent event) {
 		Configuration config = new Configuration(event.getSuggestedConfigurationFile());
 		config.load();
-		
+//Items
 		blackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearl", 5100).getInt();
 		bootsPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Boots", 5101).getInt();
 		bowPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Bow", 5102).getInt();
@@ -93,7 +103,16 @@ public class ModMain {
 		shellID = config.get(Configuration.CATEGORY_ITEM, "Shell", 5111).getInt();
 		shovelPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Shovel", 5112).getInt();
 		swordPearlID = config.get(Configuration.CATEGORY_ITEM, "Pearl Sword", 5113).getInt();
-		
+		bootsBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearly Boots", 5114).getInt();
+		chestplateBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearly Chestplate", 5115).getInt();
+		helmetBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearly Helmet", 5116).getInt();
+		leggingsBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearly Leggings", 5117).getInt();
+		skirtGrassID = config.get(Configuration.CATEGORY_ITEM, "Grass Skirt", 5118).getInt();
+		shovelBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearl Shovel", 5119).getInt();
+		swordBlackPearlID = config.get(Configuration.CATEGORY_ITEM, "Black Pearl Sword", 5120).getInt();
+		crownShellID = config.get(Configuration.CATEGORY_ITEM, "Crown of Shells", 5121).getInt();
+		hempSandalsID = config.get(Configuration.CATEGORY_ITEM, "Hemp Sandals", 5122).getInt();
+//Blocks
 		pearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Pearly Stone", 510).getInt();
 		blackPearlstoneID = config.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone", 511).getInt();
 		pearlstoneBrickID = config.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick", 512).getInt();
