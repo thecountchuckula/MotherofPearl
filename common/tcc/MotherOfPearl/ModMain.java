@@ -34,7 +34,7 @@ public class ModMain {
     public static CreativeTabs tabMoP_WIP = new CreativeTabs("MoP_WIP") {
         @Override
         public ItemStack getIconItemStack() {
-            return new ItemStack(ModArmor.braShell, 1, 0);
+            return new ItemStack(ModTools.bowPearl, 1, 0);
         }
     };
 
@@ -47,11 +47,6 @@ public class ModMain {
     public static void preInit(FMLPreInitializationEvent event) {
         config = new Configuration(event.getSuggestedConfigurationFile());
         cfg = config;
-
-        /*
-         * I have begun reorganizing some code no idea what i've broken but I'm
-         * working on making it cleaner.
-         */
 
         MOPConfiguration.init();
         ModBlocks.init();
