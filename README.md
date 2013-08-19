@@ -9,14 +9,7 @@ Please don't release anyone's work and say it's your own.
 
 TODO:
 
-I. Fix bow drawing animation (texture array?)
-	I'm getting closer and closer to scrapping the bow.
-	I got it to enchant properly, and the bow takes on the proper texture when not in use, but It won't
-	implement the _pulling_0 - 2.png files.
-	I will keep at it tho.
-	UPDATE: Nevermind. I'm going to scrap the bow for now. Leaving it in the WIP creative tab. It does
-	shoot arrows, and is enchantable like a bow, but I can't figure out the animation.
-
+Null
 
 Maybe Never TODO(Maybe after everything above is done):
 
