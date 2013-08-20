@@ -7,7 +7,10 @@ import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.item.crafting.ShapedRecipes;
 import net.minecraft.item.crafting.ShapelessRecipes;
+import tcc.MotherOfPearl.armor.ModArmor;
 import tcc.MotherOfPearl.blocks.ModBlocks;
+import tcc.MotherOfPearl.items.ModItems;
+import tcc.MotherOfPearl.tools.ModTools;
 import cpw.mods.fml.common.registry.GameRegistry;
 import darkevilmac.MotherOfPearl.lib.ItemStacks;
 
@@ -16,6 +19,10 @@ public class Crafting {
     public static void init() {
         Crafting.RemoveRecipe(ItemStacks.clayBlock);
         GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.classicClay, 1), "yy", "yy", 'y', ItemStacks.clayItem);
+        ModArmor.initCrafting();
+        ModBlocks.initCrafting();
+        ModItems.initCrafting();
+        ModTools.initCrafting();
     }
 
     protected static void RemoveRecipe(ItemStack resultItem) {

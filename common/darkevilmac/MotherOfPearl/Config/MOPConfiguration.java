@@ -23,6 +23,8 @@ public class MOPConfiguration {
     public static int pearlstoneID;
     public static int blackPearlstoneID;
     public static int pearlstoneBrickID;
+    public static int pearlCobblestoneID;
+    public static int blackPearlCobblestoneID;
     public static int blackPearlstoneBrickID;
     public static int clayOysterID;
     public static int classicClayID;
@@ -63,7 +65,9 @@ public class MOPConfiguration {
         crownShellID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Crown of Shells", 5121).getInt();
         hempSandalsID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Hemp Sandals", 5122).getInt();
         // Blocks
+        pearlCobblestoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Cobblestone", 516).getInt();
         pearlstoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone", 510).getInt();
+        blackPearlCobblestoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Cobblestone", 517).getInt();
         blackPearlstoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone", 511).getInt();
         pearlstoneBrickID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick", 512).getInt();
         blackPearlstoneBrickID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick", 513).getInt();
