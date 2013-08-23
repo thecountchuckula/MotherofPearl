@@ -1,5 +1,7 @@
 package tcc.MotherOfPearl.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -21,5 +23,18 @@ public class BlockBlackPearlStone extends Block {
     public void registerIcons(IconRegister reg) {
         blockIcon = reg.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
     }
-
+    /**
+     * Returns the ID of the items to drop on destruction.
+     */
+    @Override
+    public int idDropped(int par1, Random par2Random, int par3) {
+        return ModBlocks.blackPearlCobblestone.blockID;
+    }
+    /**
+     * Returns the quantity of items to drop on block destruction.
+     */
+    @Override
+    public int quantityDropped(Random par1Random) {
+        return 1;
+    }
 }
