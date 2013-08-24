@@ -31,12 +31,15 @@ public class ModMain {
             return new ItemStack(ModItems.pearl, 1, 0);
         }
     };
-    public static CreativeTabs tabMoP_WIP = new CreativeTabs("MoP_WIP") {
-        @Override
-        public ItemStack getIconItemStack() {
-            return new ItemStack(ModTools.bowPearl, 1, 0);
-        }
-    };
+/*
+*     public static CreativeTabs tabMoP_WIP = new CreativeTabs("MoP_WIP") {
+* 
+*        @Override
+*        public ItemStack getIconItemStack() {
+*            return new ItemStack(ModTools.bowPearl, 1, 0);
+*        }
+*    };
+*/
 
     @SidedProxy(clientSide = Reference.PROXY_PATH + ".ClientProxy", serverSide = Reference.PROXY_PATH + ".CommonProxy")
     public static CommonProxy proxy;

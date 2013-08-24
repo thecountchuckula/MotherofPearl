@@ -11,6 +11,7 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
+import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
@@ -21,16 +22,20 @@ import darkevilmac.MotherOfPearl.lib.Reference;
 
 public class ItemPearlBow extends ItemBow {
 
-    public static final String[] bowPullIconNameArray = new String[] { "pulling_0", "pulling_1", "pulling_2" };
+    
     @SideOnly(Side.CLIENT)
-    private Icon[] iconArray;
-
+    private Icon icon0;
+    private Icon icon1;
+    private Icon icon2;
+    
+    
+    
     public ItemPearlBow(int par1) {
         super(par1);
         maxStackSize = 1;
         // Lasts longer
         this.setMaxDamage(512);
-        this.setCreativeTab(ModMain.tabMoP_WIP);
+        this.setCreativeTab(ModMain.tabMoP);
         this.setUnlocalizedName("bowPearl");
     }
 
@@ -146,24 +151,38 @@ public class ItemPearlBow extends ItemBow {
     public int getItemEnchantability() {
         return 10;
     }
-
+    
+    public String STANDBY = Reference.MOD_ID.toLowerCase() + ":bowPearl_standby";
+    public String TEXTURE0 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_0";
+    public String TEXTURE1 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_1";
+    public String TEXTURE2 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_2";
+    
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister) {
-        itemIcon = par1IconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5) + "_standby");
-        iconArray = new Icon[bowPullIconNameArray.length];
-
-        for (int i = 0; i < iconArray.length; ++i) {
-            iconArray[i] = par1IconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5) + "_" + bowPullIconNameArray[i]);
-        }
+        itemIcon = par1IconRegister.registerIcon(STANDBY);
+        icon0 = par1IconRegister.registerIcon(TEXTURE0);
+        icon1 = par1IconRegister.registerIcon(TEXTURE1);
+        icon2 = par1IconRegister.registerIcon(TEXTURE2);
     }
-
     @Override
     @SideOnly(Side.CLIENT)
-    /**
-     * used to cycle through icons based on their used duration, i.e. for the bow
-     */
-    public Icon getItemIconForUseDuration(int par1) {
-        return iconArray[par1];
-    }
+    public Icon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining)
+    {
+     if(player.getItemInUse() == null) return this.itemIcon;
+            int Pulling = stack.getMaxItemUseDuration() - useRemaining;
+            if (Pulling >= 18)
+            {
+             return icon2;
+            }
+            else if (Pulling > 13)
+            {
+             return icon1;
+            }
+            else if (Pulling > 0)
+            {
+             return icon0;
+            }                         
+            return itemIcon;
+}
 }
