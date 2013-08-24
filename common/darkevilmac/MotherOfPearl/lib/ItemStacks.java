@@ -9,6 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ItemStacks {
+	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
     public static final ItemStack inkSac = new ItemStack(Item.dyePowder, 1, 0);
     public static final ItemStack stick = new ItemStack(Item.stick, 1, 0);
     public static final ItemStack wheat = new ItemStack(Item.wheat, 1, 0);
@@ -53,5 +54,6 @@ public class ItemStacks {
     public static final ItemStack swordPearl = new ItemStack(ModTools.swordPearl, 1, 0);
     public static final ItemStack swordBlackPearl = new ItemStack(ModTools.swordBlackPearl, 1, 0);
     public static final ItemStack bowPearl = new ItemStack(ModTools.bowPearl, 1, 0);
-    public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, 0);
+    public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, WILDCARD_VALUE);
+    
 }

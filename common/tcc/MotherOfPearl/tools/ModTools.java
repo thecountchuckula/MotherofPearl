@@ -31,7 +31,7 @@ public class ModTools {
 
     public static void defTools() {
         bowPearl = new ItemPearlBow(MOPConfiguration.bowPearlID);
-        knifePearl = new ItemPearlKnife(MOPConfiguration.knifePearlID);
+        knifePearl = new ItemPearlKnife(MOPConfiguration.knifePearlID, pearlKnife);
         shovelPearl = new ItemPearlShovel(MOPConfiguration.shovelPearlID);
         shovelBlackPearl = new ItemBlackPearlShovel(MOPConfiguration.shovelBlackPearlID);
         swordPearl = new ItemPearlSword(MOPConfiguration.swordPearlID);

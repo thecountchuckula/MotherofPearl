@@ -1,5 +1,6 @@
 package tcc.MotherOfPearl.items;
 
+import tcc.MotherOfPearl.tools.ModTools;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -37,7 +38,10 @@ public class ModItems {
         GameRegistry.addRecipe(new ItemStack(blackPearl, 8), "yyy", "yby", "yyy", 'b', ItemStacks.inkSac, 'y', pearl);
         GameRegistry.addSmelting(oyster.itemID, new ItemStack(oysterMeat), 0.1f);
         GameRegistry.addRecipe(new ItemStack(pearl, 8), "yyy", "yxy", "yyy", 'x', ItemStacks.stone, 'y', oyster);
-        GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), oyster);
+        // Uses Pearling Knife to split an oyster into two shells. Gets 30 uses, making a total of 60 shells.
+        // (If only used in the crafting recipe.)
+        // Thank you to DeverionX for the great tutorial on MinecraftForums.
+        GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), oyster, ItemStacks.knifePearl);
     }
 
     public static void initLanguageRegistry() {

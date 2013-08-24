@@ -36,7 +36,7 @@ public class ModBlocks {
         pearlstoneBrick = new BlockPearlStoneBrick(MOPConfiguration.pearlstoneBrickID, Material.rock);
         blackPearlstoneBrick = new BlockBlackPearlStoneBrick(MOPConfiguration.blackPearlstoneBrickID, Material.rock);
         clayOyster = new BlockOysterClay(MOPConfiguration.clayOysterID, Material.clay);
-        classicClay = new BlockClassicClay(MOPConfiguration.classicClayID);
+        classicClay = new BlockClassicClay(MOPConfiguration.classicClayID, Material.clay);
     }
 
     public static void initHarvestLevels() {
