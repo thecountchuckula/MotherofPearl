@@ -25,7 +25,7 @@ public class ModArmor {
     public static Item hempSandals;
 
     public static EnumArmorMaterial pearlMaterial = EnumHelper.addArmorMaterial("PearlArmor", 15, new int[] { 2, 6, 5, 2 }, 35);
-    public static EnumArmorMaterial blackPearlMaterial = EnumHelper.addArmorMaterial("PearlArmor", 21, new int[] { 3, 9, 6, 3 }, 25);
+    public static EnumArmorMaterial blackPearlMaterial = EnumHelper.addArmorMaterial("BlackPearlArmor", 15, new int[] { 2, 6, 5, 2 }, 35);
     public static EnumArmorMaterial shellMaterial = EnumHelper.addArmorMaterial("ShellArmor", 11, new int[] { 1, 5, 3, 2 }, 8);
 
     public static void init() {

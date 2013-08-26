@@ -12,6 +12,8 @@ import darkevilmac.MotherOfPearl.lib.ItemStacks;
 
 public class ModBlocks {
 
+    public static Block blackPearlWall;
+    public static Block pearlWall;
     public static Block pearlstone;
     public static Block pearlCobblestone;
     public static Block blackPearlCobblestone;
@@ -29,6 +31,9 @@ public class ModBlocks {
     }
 
     public static void defBlocks() {
+
+        blackPearlWall = new BlockBlackPearlWall(MOPConfiguration.blackPearlWallID, blackPearlstone);;
+        pearlWall = new BlockPearlWall(MOPConfiguration.pearlWallID, pearlstone);;
         pearlCobblestone = new BlockPearlCobbleStone(MOPConfiguration.pearlCobblestoneID, Material.rock);
         pearlstone = new BlockPearlStone(MOPConfiguration.pearlstoneID, Material.rock);
         blackPearlCobblestone = new BlockBlackPearlCobbleStone(MOPConfiguration.blackPearlCobblestoneID, Material.rock);
@@ -40,6 +45,8 @@ public class ModBlocks {
     }
 
     public static void initHarvestLevels() {
+    	MinecraftForge.setBlockHarvestLevel(blackPearlWall, "Pickaxe", 2);
+    	MinecraftForge.setBlockHarvestLevel(pearlWall, "Pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(pearlCobblestone, "Pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(pearlstone, "Pickaxe", 2);
         MinecraftForge.setBlockHarvestLevel(blackPearlCobblestone, "Pickaxe", 2);
@@ -51,6 +58,8 @@ public class ModBlocks {
     }
 
     public static void initGameRegistry() {
+    	GameRegistry.registerBlock(blackPearlWall, "blackPearlWall");
+    	GameRegistry.registerBlock(pearlWall, "pearlWall");
         GameRegistry.registerBlock(pearlCobblestone, "pearlCobblestone");
         GameRegistry.registerBlock(pearlstone, "pearlstone");
         GameRegistry.registerBlock(blackPearlCobblestone, "blackPearlCobblestone");
@@ -62,6 +71,8 @@ public class ModBlocks {
     }
 
     public static void initCrafting() {
+    	GameRegistry.addRecipe(new ItemStack(blackPearlWall, 6), "bbb", "bbb", 'b', blackPearlstone);
+    	GameRegistry.addRecipe(new ItemStack(pearlWall, 6), "sss", "sss", 's', pearlstone);
         GameRegistry.addRecipe(new ItemStack(pearlCobblestone, 4), "byb", "yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.cobblestone);
         GameRegistry.addRecipe(new ItemStack(pearlstone, 4), "byb", "yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.stone);
         GameRegistry.addSmelting(ModBlocks.pearlCobblestone.blockID, ItemStacks.pearlstone, 0.1F);
@@ -75,6 +86,8 @@ public class ModBlocks {
     }
 
     public static void initLanguageRegistry() {
+    	LanguageRegistry.addName(blackPearlWall, "Black Pearly Wall");
+    	LanguageRegistry.addName(pearlWall, "Pearly Wall");
         LanguageRegistry.addName(pearlCobblestone, "Pearly Cobblestone");
         LanguageRegistry.addName(pearlstone, "Pearly Stone");
         LanguageRegistry.addName(blackPearlCobblestone, "Black Pearly Cobblestone");
