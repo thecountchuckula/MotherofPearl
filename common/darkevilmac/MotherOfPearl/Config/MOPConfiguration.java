@@ -21,8 +21,12 @@ public class MOPConfiguration {
     public static int chestplatePearlID;
     public static int helmetPearlID;
     public static int leggingsPearlID;
-    public static int blackPearlWallID;
-    public static int pearlWallID;
+    public static int pearlCobblestoneFenceID;
+    public static int pearlstoneBrickFenceID;
+    public static int pearlstoneFenceID;
+    public static int blackPearlCobblestoneFenceID;
+    public static int blackPearlstoneBrickFenceID;
+    public static int blackPearlstoneFenceID;
     public static int pearlstoneID;
     public static int blackPearlstoneID;
     public static int pearlstoneBrickID;
@@ -68,8 +72,13 @@ public class MOPConfiguration {
         crownShellID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Crown of Shells", 5121).getInt();
         hempSandalsID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Hemp Sandals", 5122).getInt();
         // Blocks
-        blackPearlWallID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Wall", 518).getInt();
-        pearlWallID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Wall", 519).getInt();
+        
+        pearlstoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Fence", 518).getInt();
+        pearlCobblestoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Cobblestone Fence", 519).getInt();
+        pearlstoneBrickFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick Fence", 520).getInt();
+        blackPearlCobblestoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Fence", 522).getInt();
+        blackPearlstoneBrickFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Cobblestone Fence", 523).getInt();
+        blackPearlstoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick Fence", 524).getInt();
         pearlCobblestoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Cobblestone", 516).getInt();
         pearlstoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone", 510).getInt();
         blackPearlCobblestoneID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Cobblestone", 517).getInt();
