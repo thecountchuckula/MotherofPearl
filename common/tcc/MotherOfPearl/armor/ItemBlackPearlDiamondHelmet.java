@@ -11,14 +11,14 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import darkevilmac.MotherOfPearl.lib.Reference;
 
-public class ItemBlackPearlLeggings extends ItemArmor {
+public class ItemBlackPearlDiamondHelmet extends ItemArmor {
 
-    public ItemBlackPearlLeggings(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, String type) {
+    public ItemBlackPearlDiamondHelmet(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4, String type) {
         super(par1, par2EnumArmorMaterial, par3, par4);
         // TODO Auto-generated constructor stub
         this.setMaxStackSize(1);
         this.setCreativeTab(ModMain.tabMoP);
-        this.setUnlocalizedName("leggingsBlackPearl");
+        this.setUnlocalizedName("helmetBlackPearlDiamond");
     }
 
     @Override
@@ -30,11 +30,11 @@ public class ItemBlackPearlLeggings extends ItemArmor {
 
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
-        return Reference.MOD_ID.toLowerCase() + ":" + "bPearl_2.png";
+        return Reference.MOD_ID.toLowerCase() + ":" + "bPearlDiamond_1.png";
     }
 
     @Override
     public boolean getIsRepairable(ItemStack par1ItemStack, ItemStack par2ItemStack) {
-        return ModItems.blackPearl.itemID == par2ItemStack.itemID ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
+        return ModItems.blackPearlDiamond.itemID == par2ItemStack.itemID ? true : super.getIsRepairable(par1ItemStack, par2ItemStack);
     }
 }

@@ -13,6 +13,8 @@ public class MOPConfiguration {
     public static int oysterMeatID;
     public static int pearlID;
     public static int shellID;
+    public static int blackPearlDiamondID;
+    public static int pearlDiamondID;
 
     public static int shovelPearlID;
     public static int swordPearlID;
@@ -44,18 +46,26 @@ public class MOPConfiguration {
     public static int swordBlackPearlID;
     public static int crownShellID;
     public static int hempSandalsID;
+    public static int bootsBlackPearlDiamondID;
+    public static int chestplateBlackPearlDiamondID;
+    public static int helmetBlackPearlDiamondID;
+    public static int leggingsBlackPearlDiamondID;
+    public static int bootsPearlDiamondID;
+    public static int chestplatePearlDiamondID;
+    public static int helmetPearlDiamondID;
+    public static int leggingsPearlDiamondID;
 
     public static void init() {
         ModMain.cfg.load();
         // Items
         blackPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearl", 5100).getInt();
-        bootsPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Boots", 5101).getInt();
+        bootsPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Boots", 5101).getInt();
         bowPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Bow", 5102).getInt();
         braShellID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Shell Bra", 5103).getInt();
-        chestplatePearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Chestplate", 5104).getInt();
-        helmetPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Helmet", 5105).getInt();
+        chestplatePearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Chestplate", 5104).getInt();
+        helmetPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Helmet", 5105).getInt();
         knifePearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearling Knife", 5106).getInt();
-        leggingsPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Leggings", 5107).getInt();
+        leggingsPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Leggings", 5107).getInt();
         oysterID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Oyster", 5108).getInt();
         oysterMeatID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Oyster Meat", 5109).getInt();
         pearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl", 5110).getInt();
@@ -71,8 +81,20 @@ public class MOPConfiguration {
         swordBlackPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearl Sword", 5120).getInt();
         crownShellID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Crown of Shells", 5121).getInt();
         hempSandalsID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Hemp Sandals", 5122).getInt();
-        // Blocks
+        // Diamond
+        blackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond", 5123).getInt();
+        pearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond", 5124).getInt();
+        bootsPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond Boots", 5125).getInt();
+        chestplatePearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond Chestplate", 5126).getInt();
+        helmetPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond Helmet", 5127).getInt();
+        leggingsPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond Leggings", 5128).getInt();
+        bootsBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Boots", 5129).getInt();
+        chestplateBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Chestplate", 5130).getInt();
+        helmetBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Helmet", 5131).getInt();
+        leggingsBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Leggings", 5132).getInt();
         
+        // Blocks
+
         pearlstoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Fence", 518).getInt();
         pearlCobblestoneFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Cobblestone Fence", 519).getInt();
         pearlstoneBrickFenceID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick Fence", 520).getInt();

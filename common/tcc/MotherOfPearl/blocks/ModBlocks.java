@@ -2,6 +2,7 @@ package tcc.MotherOfPearl.blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFence;
+import net.minecraft.block.BlockStairs;
 import net.minecraft.block.BlockWall;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
@@ -40,30 +41,36 @@ public class ModBlocks {
 	}
 
 	public static void defBlocks() {
-		pearlstoneFence = new BlockFence(MOPConfiguration.pearlstoneFenceID, Reference.MOD_ID.toLowerCase() + ":pearlstone", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-        	pearlstoneFence.setCreativeTab(ModMain.tabMoP);
-	    pearlCobblestoneFence = new BlockFence(MOPConfiguration.pearlCobblestoneFenceID, Reference.MOD_ID.toLowerCase() + ":pearlCobblestone", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-	    	pearlCobblestoneFence.setCreativeTab(ModMain.tabMoP);
-	    pearlstoneBrickFence = new BlockFence(MOPConfiguration.pearlstoneBrickFenceID, Reference.MOD_ID.toLowerCase() + ":pearlstoneBrick", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-	    	pearlstoneBrickFence.setCreativeTab(ModMain.tabMoP);
-	    blackPearlCobblestoneFence = new BlockFence(MOPConfiguration.blackPearlCobblestoneFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlCobblestone", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-	    	blackPearlCobblestoneFence.setCreativeTab(ModMain.tabMoP);
-	    blackPearlstoneBrickFence = new BlockFence(MOPConfiguration.blackPearlstoneBrickFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlstoneBrick", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-	    	blackPearlstoneBrickFence.setCreativeTab(ModMain.tabMoP);
-	    blackPearlstoneFence = new BlockFence(MOPConfiguration.blackPearlstoneFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlstone", Material.rock)
-			.setHardness(3F)
-			.setUnlocalizedName("pearlFence");
-	    	blackPearlstoneFence.setCreativeTab(ModMain.tabMoP);
+		pearlstoneFence = new BlockFence(
+				MOPConfiguration.pearlstoneFenceID, Reference.MOD_ID.toLowerCase() + ":pearlstone", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("pearlstoneFence")
+				.setCreativeTab(ModMain.tabMoP);
+	    pearlCobblestoneFence = new BlockFence(
+	    		MOPConfiguration.pearlCobblestoneFenceID, Reference.MOD_ID.toLowerCase() + ":pearlCobblestone", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("pearlCobblestoneFence")
+				.setCreativeTab(ModMain.tabMoP);
+	    pearlstoneBrickFence = new BlockFence(
+	    		MOPConfiguration.pearlstoneBrickFenceID, Reference.MOD_ID.toLowerCase() + ":pearlstoneBrick", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("pearlstoneBrickFence")
+				.setCreativeTab(ModMain.tabMoP);
+	    blackPearlCobblestoneFence = new BlockFence(
+	    		MOPConfiguration.blackPearlCobblestoneFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlCobblestone", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("blackPearlCobblestoneFence")
+				.setCreativeTab(ModMain.tabMoP);
+	    blackPearlstoneBrickFence = new BlockFence(
+	    		MOPConfiguration.blackPearlstoneBrickFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlstoneBrick", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("blackPearlstoneBrickFence")
+				.setCreativeTab(ModMain.tabMoP);
+	    blackPearlstoneFence = new BlockFence(
+	    		MOPConfiguration.blackPearlstoneFenceID, Reference.MOD_ID.toLowerCase() + ":blackPearlstone", Material.rock)
+				.setHardness(3F)
+				.setUnlocalizedName("blackPearlstoneFence")
+	    		.setCreativeTab(ModMain.tabMoP);
 		pearlCobblestone = new BlockPearlCobbleStone(
 				MOPConfiguration.pearlCobblestoneID, Material.rock);
 		pearlstone = new BlockPearlStone(MOPConfiguration.pearlstoneID,
@@ -91,8 +98,7 @@ public class ModBlocks {
 		MinecraftForge.setBlockHarvestLevel(blackPearlstoneFence, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(pearlCobblestone, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(pearlstone, "Pickaxe", 2);
-		MinecraftForge
-				.setBlockHarvestLevel(blackPearlCobblestone, "Pickaxe", 2);
+		MinecraftForge.setBlockHarvestLevel(blackPearlCobblestone, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(blackPearlstone, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(pearlstoneBrick, "Pickaxe", 2);
 		MinecraftForge.setBlockHarvestLevel(blackPearlstoneBrick, "Pickaxe", 2);
@@ -109,12 +115,10 @@ public class ModBlocks {
 		GameRegistry.registerBlock(blackPearlstoneFence, "blackPearlstoneFence");
 		GameRegistry.registerBlock(pearlCobblestone, "pearlCobblestone");
 		GameRegistry.registerBlock(pearlstone, "pearlstone");
-		GameRegistry.registerBlock(blackPearlCobblestone,
-				"blackPearlCobblestone");
+		GameRegistry.registerBlock(blackPearlCobblestone, "blackPearlCobblestone");
 		GameRegistry.registerBlock(blackPearlstone, "blackPearlstone");
 		GameRegistry.registerBlock(pearlstoneBrick, "pearlstoneBrick");
-		GameRegistry
-				.registerBlock(blackPearlstoneBrick, "blackPearlstoneBrick");
+		GameRegistry.registerBlock(blackPearlstoneBrick, "blackPearlstoneBrick");
 		GameRegistry.registerBlock(clayOyster, "clayOyster");
 		GameRegistry.registerBlock(classicClay, "classicClay");
 	}
