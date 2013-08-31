@@ -1,11 +1,10 @@
 package darkevilmac.MotherOfPearl.Config;
 
-import net.minecraft.block.Block;
 import net.minecraftforge.common.Configuration;
 import tcc.MotherOfPearl.ModMain;
 
 public class MOPConfiguration {
-
+	
     public static int blackPearlID;
     public static int bowPearlID;
     public static int knifePearlID;
@@ -15,6 +14,8 @@ public class MOPConfiguration {
     public static int shellID;
     public static int blackPearlDiamondID;
     public static int pearlDiamondID;
+    public static int pearlIgniterID;
+    public static int pearlPortalPlacerID;
 
     public static int shovelPearlID;
     public static int swordPearlID;
@@ -54,9 +55,20 @@ public class MOPConfiguration {
     public static int chestplatePearlDiamondID;
     public static int helmetPearlDiamondID;
     public static int leggingsPearlDiamondID;
+    public static int pearlFireID;
+    public static int pearlPortalID;
+    public static int pearlGrassID;
+    public static int pearlDirtID;
+    public static int pearlLeafID;
+    public static int pearlLogID;
+    public static int pearlSaplingID;
+    
 
     public static void init() {
         ModMain.cfg.load();
+        
+    	
+    	
         // Items
         blackPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearl", 5100).getInt();
         bootsPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Boots", 5101).getInt();
@@ -81,6 +93,8 @@ public class MOPConfiguration {
         swordBlackPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearl Sword", 5120).getInt();
         crownShellID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Crown of Shells", 5121).getInt();
         hempSandalsID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Hemp Sandals", 5122).getInt();
+        pearlIgniterID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Igniter", 5000).getInt();
+        pearlPortalPlacerID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Portal Placer", 5001).getInt();
         // Diamond
         blackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond", 5123).getInt();
         pearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearly Diamond", 5124).getInt();
@@ -109,6 +123,13 @@ public class MOPConfiguration {
         blackPearlstoneBrickID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick", 513).getInt();
         clayOysterID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Oyster Yielding Clay", 514).getInt();
         classicClayID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Classic Clay", 515).getInt();
+        pearlFireID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Fire", 2000).getInt();
+        pearlPortalID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Portal", 2001).getInt();
+        pearlGrassID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Grass", 200).getInt();
+        pearlDirtID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Dirt", 201).getInt();
+        pearlLeafID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Leaf", 2002).getInt();
+        pearlLogID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Log", 2003).getInt();
+        pearlSaplingID = ModMain.cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Sapling", 2004).getInt();
 
         ModMain.cfg.save();
     }

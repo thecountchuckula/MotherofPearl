@@ -1,12 +1,13 @@
 package darkevilmac.MotherOfPearl.lib;
 
-import tcc.MotherOfPearl.items.ModItems;
-import tcc.MotherOfPearl.blocks.ModBlocks;
-import tcc.MotherOfPearl.armor.ModArmor;
-import tcc.MotherOfPearl.tools.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import tcc.MotherOfPearl.Main;
+import tcc.MotherOfPearl.armor.ModArmor;
+import tcc.MotherOfPearl.blocks.ModBlocks;
+import tcc.MotherOfPearl.items.ModItems;
+import tcc.MotherOfPearl.tools.ModTools;
 
 public class ItemStacks {
 	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
@@ -21,6 +22,9 @@ public class ItemStacks {
     public static final ItemStack clayBlock = new ItemStack(Block.blockClay, 1, 0);
     public static final ItemStack clayItem = new ItemStack(Item.clay, 1, 0);
     public static final ItemStack diamond = new ItemStack(Item.diamond, 1, 0);
+    public static final ItemStack matches = new ItemStack(Item.flintAndSteel, 1, 0);
+    public static final ItemStack obsidian = new ItemStack(Block.obsidian, 1, 0);
+    public static final ItemStack lighter = new ItemStack(Main.PearlFlintAndSteel, 1, 0);
     //MopArmor
     public static final ItemStack helmetPearl = new ItemStack(ModArmor.helmetPearl, 1, 0);
     public static final ItemStack chestplatePearl = new ItemStack(ModArmor.chestplatePearl, 1, 0);
@@ -58,5 +62,7 @@ public class ItemStacks {
     public static final ItemStack swordBlackPearl = new ItemStack(ModTools.swordBlackPearl, 1, 0);
     public static final ItemStack bowPearl = new ItemStack(ModTools.bowPearl, 1, 0);
     public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, WILDCARD_VALUE);
+    //public static final ItemStack pearlIgniter = new ItemStack(ModTools.pearlIgniter, 1, 0);
+    //public static final ItemStack pearlPortalPlacer = new ItemStack(ModTools.pearlPortalPlacer, 1, 0);
     
 }

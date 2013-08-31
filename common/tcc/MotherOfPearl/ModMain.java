@@ -24,7 +24,6 @@ import darkevilmac.MotherOfPearl.misc.LanguageReg;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.version)
 @NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = true)
 public class ModMain {
-
     public static CreativeTabs tabMoP = new CreativeTabs("MoP") {
         @Override
         public ItemStack getIconItemStack() {
@@ -50,6 +49,7 @@ public class ModMain {
     public static void preInit(FMLPreInitializationEvent event) {
         config = new Configuration(event.getSuggestedConfigurationFile());
         cfg = config;
+        
 
         MOPConfiguration.init();
         ModBlocks.init();
@@ -67,9 +67,11 @@ public class ModMain {
         Block.blocksList[Block.blockClay.blockID] = ModBlocks.clayOyster;
     }
 
+
     @EventHandler
     public static void init(FMLInitializationEvent event) {
         Crafting.init();
+        Main.loadPort();
     }
 
     @EventHandler
