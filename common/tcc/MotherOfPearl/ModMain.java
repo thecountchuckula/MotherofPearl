@@ -24,19 +24,21 @@ import darkevilmac.MotherOfPearl.misc.LanguageReg;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.version)
 @NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = true)
 public class ModMain {
-
     public static CreativeTabs tabMoP = new CreativeTabs("MoP") {
         @Override
         public ItemStack getIconItemStack() {
             return new ItemStack(ModItems.pearl, 1, 0);
         }
     };
+
     public static CreativeTabs tabMoP_WIP = new CreativeTabs("MoP_WIP") {
+ 
         @Override
         public ItemStack getIconItemStack() {
-            return new ItemStack(ModTools.bowPearl, 1, 0);
+            return new ItemStack(ModBlocks.pearlstoneBrick, 1, 0);
         }
     };
+
 
     @SidedProxy(clientSide = Reference.PROXY_PATH + ".ClientProxy", serverSide = Reference.PROXY_PATH + ".CommonProxy")
     public static CommonProxy proxy;
@@ -47,6 +49,7 @@ public class ModMain {
     public static void preInit(FMLPreInitializationEvent event) {
         config = new Configuration(event.getSuggestedConfigurationFile());
         cfg = config;
+        
 
         MOPConfiguration.init();
         ModBlocks.init();
@@ -64,9 +67,11 @@ public class ModMain {
         Block.blocksList[Block.blockClay.blockID] = ModBlocks.clayOyster;
     }
 
+
     @EventHandler
     public static void init(FMLInitializationEvent event) {
         Crafting.init();
+        Main.loadPort();
     }
 
     @EventHandler

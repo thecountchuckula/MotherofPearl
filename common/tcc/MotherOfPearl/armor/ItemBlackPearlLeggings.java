@@ -30,7 +30,7 @@ public class ItemBlackPearlLeggings extends ItemArmor {
 
     @Override
     public String getArmorTexture(ItemStack stack, Entity entity, int slot, int layer) {
-        return Reference.MOD_ID.toLowerCase() + ":" + "bPpearl_2.png";
+        return Reference.MOD_ID.toLowerCase() + ":" + "bPearl_2.png";
     }
 
     @Override

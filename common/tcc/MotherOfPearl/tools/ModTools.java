@@ -31,7 +31,7 @@ public class ModTools {
 
     public static void defTools() {
         bowPearl = new ItemPearlBow(MOPConfiguration.bowPearlID);
-        knifePearl = new ItemPearlKnife(MOPConfiguration.knifePearlID);
+        knifePearl = new ItemPearlKnife(MOPConfiguration.knifePearlID, pearlKnife);
         shovelPearl = new ItemPearlShovel(MOPConfiguration.shovelPearlID);
         shovelBlackPearl = new ItemBlackPearlShovel(MOPConfiguration.shovelBlackPearlID);
         swordPearl = new ItemPearlSword(MOPConfiguration.swordPearlID);
@@ -47,21 +47,10 @@ public class ModTools {
         GameRegistry.addRecipe(new ItemStack(shovelBlackPearl, 1), "y", "x", "x", 'x', ItemStacks.stick, 'y', ModItems.blackPearl);
         GameRegistry.addRecipe(new ItemStack(swordPearl, 1), "y", "y", "x", 'x', ItemStacks.stick, 'y', ModItems.pearl);
         GameRegistry.addRecipe(new ItemStack(swordBlackPearl, 1), "y", "y", "x", 'x', ItemStacks.stick, 'y', ModItems.blackPearl);
-        // GameRegistry.addRecipe(new ItemStack(bowPearl, 1),
-        // "zx ",
-        // "z y",
-        // "zx ",
-        // 'x', stick,
-        // 'y', pearl,
-        // 'z', string);
-        // GameRegistry.addRecipe(new ItemStack(bowPearl, 1),
-        // " xz",
-        // "y z",
-        // " xz",
-        // 'x', stick,
-        // 'y', pearl,
-        // 'z', string);
+        GameRegistry.addRecipe(new ItemStack(bowPearl, 1), "zx ", "z y", "zx ", 'x', ItemStacks.stick, 'y', ItemStacks.pearl, 'z', ItemStacks.string);
+        GameRegistry.addRecipe(new ItemStack(bowPearl, 1), " xz", "y z", " xz", 'x', ItemStacks.stick, 'y', ItemStacks.pearl, 'z', ItemStacks.string);
         GameRegistry.addRecipe(new ItemStack(knifePearl, 1), "y", "x", 'x', ItemStacks.stick, 'y', ModItems.pearl);
+        GameRegistry.addRecipe(ItemStacks.lighter, "ppp", "pfp", "spp", 'f', ItemStacks.matches, 'p', ModItems.pearl, 's', ItemStacks.stick);
     }
 
     public static void initLanguageRegistry() {

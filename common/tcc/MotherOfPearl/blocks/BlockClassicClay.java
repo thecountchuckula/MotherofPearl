@@ -10,11 +10,11 @@ import net.minecraft.item.Item;
 
 public class BlockClassicClay extends Block {
 
-    public BlockClassicClay(int par1) {
-        super(par1, Material.clay);
+    public BlockClassicClay(int par1, Material par2Material) {
+        super(par1, par2Material);
         this.setCreativeTab(CreativeTabs.tabBlock);
         this.setHardness(0.6F);
-        this.setStepSound(soundGravelFootstep);
+        this.setStepSound(Block.blockClay.stepSound);
         this.setUnlocalizedName("classicClay");
     }
 

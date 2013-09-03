@@ -1,14 +1,16 @@
 package darkevilmac.MotherOfPearl.lib;
 
-import tcc.MotherOfPearl.items.ModItems;
-import tcc.MotherOfPearl.blocks.ModBlocks;
-import tcc.MotherOfPearl.armor.ModArmor;
-import tcc.MotherOfPearl.tools.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import tcc.MotherOfPearl.Main;
+import tcc.MotherOfPearl.armor.ModArmor;
+import tcc.MotherOfPearl.blocks.ModBlocks;
+import tcc.MotherOfPearl.items.ModItems;
+import tcc.MotherOfPearl.tools.ModTools;
 
 public class ItemStacks {
+	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
     public static final ItemStack inkSac = new ItemStack(Item.dyePowder, 1, 0);
     public static final ItemStack stick = new ItemStack(Item.stick, 1, 0);
     public static final ItemStack wheat = new ItemStack(Item.wheat, 1, 0);
@@ -19,6 +21,10 @@ public class ItemStacks {
     public static final ItemStack stoneBrick = new ItemStack(Block.stoneBrick, 1, 0);
     public static final ItemStack clayBlock = new ItemStack(Block.blockClay, 1, 0);
     public static final ItemStack clayItem = new ItemStack(Item.clay, 1, 0);
+    public static final ItemStack diamond = new ItemStack(Item.diamond, 1, 0);
+    public static final ItemStack matches = new ItemStack(Item.flintAndSteel, 1, 0);
+    public static final ItemStack obsidian = new ItemStack(Block.obsidian, 1, 0);
+    public static final ItemStack lighter = new ItemStack(Main.PearlFlintAndSteel, 1, 0);
     //MopArmor
     public static final ItemStack helmetPearl = new ItemStack(ModArmor.helmetPearl, 1, 0);
     public static final ItemStack chestplatePearl = new ItemStack(ModArmor.chestplatePearl, 1, 0);
@@ -47,11 +53,16 @@ public class ItemStacks {
     public static final ItemStack blackPearl = new ItemStack(ModItems.blackPearl, 1, 0);
     public static final ItemStack pearl = new ItemStack(ModItems.pearl, 1, 0);
     public static final ItemStack shell = new ItemStack(ModItems.shell, 1, 0);
+    public static final ItemStack blackPearlDiamond = new ItemStack(ModItems.blackPearlDiamond, 1, 0);
+    public static final ItemStack pearlDiamond = new ItemStack(ModItems.pearlDiamond, 1, 0);
     //MopTools
     public static final ItemStack shovelPearl = new ItemStack(ModTools.shovelPearl, 1, 0);
     public static final ItemStack shovelBlackPearl = new ItemStack(ModTools.shovelBlackPearl, 1, 0);
     public static final ItemStack swordPearl = new ItemStack(ModTools.swordPearl, 1, 0);
     public static final ItemStack swordBlackPearl = new ItemStack(ModTools.swordBlackPearl, 1, 0);
     public static final ItemStack bowPearl = new ItemStack(ModTools.bowPearl, 1, 0);
-    public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, 0);
+    public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, WILDCARD_VALUE);
+    //public static final ItemStack pearlIgniter = new ItemStack(ModTools.pearlIgniter, 1, 0);
+    //public static final ItemStack pearlPortalPlacer = new ItemStack(ModTools.pearlPortalPlacer, 1, 0);
+    
 }

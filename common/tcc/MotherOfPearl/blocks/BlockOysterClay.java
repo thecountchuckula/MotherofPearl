@@ -13,9 +13,8 @@ public class BlockOysterClay extends Block {
 
     public BlockOysterClay(int par1, Material par2Material) {
         super(par1, par2Material);
-        // TODO Auto-generated constructor stub
         this.setUnlocalizedName("clayOyster");
-        this.setHardness(.5F);
+        this.setHardness(0.5F);
         this.setCreativeTab(ModMain.tabMoP);
         this.setStepSound(Block.blockClay.stepSound);
     }
