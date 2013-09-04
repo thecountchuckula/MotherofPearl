@@ -15,6 +15,7 @@ public class ItemStacks {
     public static final ItemStack stick = new ItemStack(Item.stick, 1, 0);
     public static final ItemStack wheat = new ItemStack(Item.wheat, 1, 0);
     public static final ItemStack ingotIron = new ItemStack(Item.ingotIron, 1, 0);
+    public static final ItemStack ingotGold = new ItemStack(Item.ingotGold, 1, 0);
     public static final ItemStack string = new ItemStack(Item.silk, 1, 0);
     public static final ItemStack cobblestone = new ItemStack(Block.cobblestone, 1, 0);
     public static final ItemStack stone = new ItemStack(Block.stone, 1, 0);
@@ -25,6 +26,22 @@ public class ItemStacks {
     public static final ItemStack matches = new ItemStack(Item.flintAndSteel, 1, 0);
     public static final ItemStack obsidian = new ItemStack(Block.obsidian, 1, 0);
     public static final ItemStack lighter = new ItemStack(Main.PearlFlintAndSteel, 1, 0);
+    public static final ItemStack sand = new ItemStack(Block.sand, 1, 0);
+    public static final ItemStack oreIron = new ItemStack(Block.oreIron, 1, 0);
+    public static final ItemStack oreGold = new ItemStack(Block.oreGold, 1, 0);
+    public static final ItemStack blazePowder = new ItemStack(Item.blazePowder, 1, 0);
+    public static final ItemStack redstone = new ItemStack(Item.redstone, 1, 0);
+    public static final ItemStack cookedBeef = new ItemStack(Item.beefCooked, 8, 0);
+    public static final ItemStack cookedPork = new ItemStack(Item.porkCooked, 8, 0);
+    public static final ItemStack bakedPotato = new ItemStack(Item.bakedPotato, 8, 0);
+    public static final ItemStack cookedFish = new ItemStack(Item.fishCooked, 8, 0);
+    public static final ItemStack cookedChicken = new ItemStack(Item.chickenCooked, 8, 0);
+    public static final ItemStack beef = new ItemStack(Item.beefRaw, 1, 0);
+    public static final ItemStack pork = new ItemStack(Item.porkRaw, 1, 0);
+    public static final ItemStack potato = new ItemStack(Item.potato, 1, 0);
+    public static final ItemStack fish = new ItemStack(Item.fishRaw, 1, 0);
+    public static final ItemStack chicken = new ItemStack(Item.chickenRaw, 1, 0);
+    
     //MopArmor
     public static final ItemStack helmetPearl = new ItemStack(ModArmor.helmetPearl, 1, 0);
     public static final ItemStack chestplatePearl = new ItemStack(ModArmor.chestplatePearl, 1, 0);
@@ -62,7 +79,7 @@ public class ItemStacks {
     public static final ItemStack swordBlackPearl = new ItemStack(ModTools.swordBlackPearl, 1, 0);
     public static final ItemStack bowPearl = new ItemStack(ModTools.bowPearl, 1, 0);
     public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, WILDCARD_VALUE);
-    //public static final ItemStack pearlIgniter = new ItemStack(ModTools.pearlIgniter, 1, 0);
-    //public static final ItemStack pearlPortalPlacer = new ItemStack(ModTools.pearlPortalPlacer, 1, 0);
+    public static final ItemStack mortarAndPestle = new ItemStack(ModTools.mortarAndPestle, 1, WILDCARD_VALUE);
+    public static final ItemStack portableCooker = new ItemStack(ModTools.portableCooker, 1, WILDCARD_VALUE);
     
 }

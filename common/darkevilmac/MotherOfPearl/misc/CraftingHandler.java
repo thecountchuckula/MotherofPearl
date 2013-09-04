@@ -21,6 +21,21 @@ IInventory craftMatrix) {
 		 }
 		 craftMatrix.setInventorySlotContents(i, k);
 	}
+	if(j.getItem() != null && j.getItem() == ModTools.mortarAndPestle)
+	{
+		 ItemStack k = new ItemStack(ModTools.mortarAndPestle, 2, (j.getItemDamage() + 1));
+		 if(k.getItemDamage() >= k.getMaxDamage()){
+		 k.stackSize--;
+		 }
+		 craftMatrix.setInventorySlotContents(i, k);
+	}if(j.getItem() != null && j.getItem() == ModTools.portableCooker)
+	{
+		 ItemStack k = new ItemStack(ModTools.portableCooker, 2, (j.getItemDamage() + 1));
+		 if(k.getItemDamage() >= k.getMaxDamage()){
+		 k.stackSize--;
+		 }
+		 craftMatrix.setInventorySlotContents(i, k);
+	}
 	}
 	}
 }

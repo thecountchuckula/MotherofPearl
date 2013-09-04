@@ -18,7 +18,7 @@ public class WorldProviderPearl extends WorldProvider
 	private float[] colorsSunriseSunset = new float[4];
 	public void registerWorldChunkManager()
 	{
-		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.ocean, this.dimensionId, this.dimensionId);
+		this.worldChunkMgr = new WorldChunkManagerHell(BiomeGenBase.mushroomIslandShore, this.dimensionId, this.dimensionId);
 		this.dimensionId = DimensionIDs.DIMID_1;
 		this.hasNoSky = false;
 	}

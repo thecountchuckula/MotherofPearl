@@ -18,10 +18,13 @@ public class ModTools {
     public static Item swordBlackPearl;
     public static Item bowPearl;
     public static Item knifePearl;
+    public static Item mortarAndPestle;
+    public static Item portableCooker;
 
     public static EnumToolMaterial pearlShovel = EnumHelper.addToolMaterial("PearlShovel", 2, 256, 2f, 3f, 25);
     public static EnumToolMaterial pearlSword = EnumHelper.addToolMaterial("PearlSword", 2, 256, 1f, 2f, 25);
     public static EnumToolMaterial pearlKnife = EnumHelper.addToolMaterial("PearlKnife", 2, 1000, .5f, 1f, 25);
+    
 
     public static void init() {
         defTools();
@@ -36,6 +39,8 @@ public class ModTools {
         shovelBlackPearl = new ItemBlackPearlShovel(MOPConfiguration.shovelBlackPearlID);
         swordPearl = new ItemPearlSword(MOPConfiguration.swordPearlID);
         swordBlackPearl = new ItemBlackPearlSword(MOPConfiguration.swordBlackPearlID);
+        mortarAndPestle = new ItemMortarAndPestle(MOPConfiguration.mortarAndPestleID);
+        portableCooker = new ItemPortableCooker(MOPConfiguration.portableCookerID);
     }
 
     public static void initGameRegistry() {
@@ -50,7 +55,9 @@ public class ModTools {
         GameRegistry.addRecipe(new ItemStack(bowPearl, 1), "zx ", "z y", "zx ", 'x', ItemStacks.stick, 'y', ItemStacks.pearl, 'z', ItemStacks.string);
         GameRegistry.addRecipe(new ItemStack(bowPearl, 1), " xz", "y z", " xz", 'x', ItemStacks.stick, 'y', ItemStacks.pearl, 'z', ItemStacks.string);
         GameRegistry.addRecipe(new ItemStack(knifePearl, 1), "y", "x", 'x', ItemStacks.stick, 'y', ModItems.pearl);
+        GameRegistry.addRecipe(new ItemStack(mortarAndPestle, 1), "y", "x", 'x', ModItems.mortar, 'y', ModItems.pestle);
         GameRegistry.addRecipe(ItemStacks.lighter, "ppp", "pfp", "spp", 'f', ItemStacks.matches, 'p', ModItems.pearl, 's', ItemStacks.stick);
+        GameRegistry.addRecipe(new ItemStack(portableCooker, 1), "b", "m", "b", 'b', ModItems.mortar, 'm', ModItems.magnificentPearl);
     }
 
     public static void initLanguageRegistry() {
@@ -60,6 +67,8 @@ public class ModTools {
         LanguageRegistry.addName(shovelBlackPearl, "Black Pearl Shovel");
         LanguageRegistry.addName(swordPearl, "Pearl Sword");
         LanguageRegistry.addName(swordBlackPearl, "Black Pearl Sword");
+        LanguageRegistry.addName(mortarAndPestle, "Mortar And Pestle");
+        LanguageRegistry.addName(portableCooker, "Portable Cooker");
     }
 
 }
