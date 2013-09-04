@@ -130,28 +130,22 @@ public class ModBlocks {
 		GameRegistry.addRecipe(new ItemStack(blackPearlCobblestoneFence, 6), "sss", "sss", 's', blackPearlCobblestone);
 		GameRegistry.addRecipe(new ItemStack(blackPearlstoneBrickFence, 6), "sss", "sss", 's', blackPearlstoneBrick);
 		GameRegistry.addRecipe(new ItemStack(blackPearlstoneFence, 6), "sss", "sss", 's', blackPearlstone);
-		GameRegistry.addRecipe(new ItemStack(pearlCobblestone, 4), "byb",
-				"yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.cobblestone);
-		GameRegistry.addRecipe(new ItemStack(pearlstone, 4), "byb", "yby",
-				"byb", 'b', ModItems.pearl, 'y', ItemStacks.stone);
-		GameRegistry.addSmelting(ModBlocks.pearlCobblestone.blockID,
-				ItemStacks.pearlstone, 0.1F);
-		GameRegistry.addRecipe(new ItemStack(blackPearlCobblestone, 4), "byb",
-				"yby", "byb", 'b', ModItems.blackPearl, 'y',
-				ItemStacks.cobblestone);
-		GameRegistry.addSmelting(ModBlocks.blackPearlCobblestone.blockID,
-				ItemStacks.blackPearlstone, 0.1F);
-		GameRegistry.addRecipe(new ItemStack(blackPearlstone, 4), "byb", "yby",
-				"byb", 'b', ModItems.blackPearl, 'y', ItemStacks.stone);
-		GameRegistry.addRecipe(new ItemStack(pearlstoneBrick, 4), "byb", "yby",
-				"byb", 'b', ModItems.pearl, 'y', ItemStacks.stoneBrick);
-		GameRegistry.addRecipe(new ItemStack(blackPearlstoneBrick, 4), "byb",
-				"yby", "byb", 'b', ModItems.blackPearl, 'y',
-				ItemStacks.stoneBrick);
-		GameRegistry.addRecipe(new ItemStack(pearlstoneBrick, 4), "yy", "yy",
-				'y', pearlstone);
-		GameRegistry.addRecipe(new ItemStack(blackPearlstoneBrick, 4), "yy",
-				"yy", 'y', blackPearlstone);
+		GameRegistry.addRecipe(new ItemStack(pearlCobblestone, 4), "byb", "yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.cobblestone);
+		GameRegistry.addRecipe(new ItemStack(pearlstone, 4), "byb", "yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.stone);
+		GameRegistry.addSmelting(ModBlocks.pearlCobblestone.blockID, ItemStacks.pearlstone, 0.1F);
+		GameRegistry.addRecipe(new ItemStack(blackPearlCobblestone, 4), "byb", "yby", "byb", 'b', ModItems.blackPearl, 'y', ItemStacks.cobblestone);
+		GameRegistry.addSmelting(ModBlocks.blackPearlCobblestone.blockID, ItemStacks.blackPearlstone, 0.1F);
+		GameRegistry.addRecipe(new ItemStack(blackPearlstone, 4), "byb", "yby", "byb", 'b', ModItems.blackPearl, 'y', ItemStacks.stone);
+		GameRegistry.addRecipe(new ItemStack(pearlstoneBrick, 4), "byb", "yby", "byb", 'b', ModItems.pearl, 'y', ItemStacks.stoneBrick);
+		GameRegistry.addRecipe(new ItemStack(blackPearlstoneBrick, 4), "byb", "yby", "byb", 'b', ModItems.blackPearl, 'y', ItemStacks.stoneBrick);
+		GameRegistry.addRecipe(new ItemStack(pearlstoneBrick, 4), "yy", "yy", 'y', pearlstone);
+		GameRegistry.addRecipe(new ItemStack(blackPearlstoneBrick, 4), "yy", "yy", 'y', blackPearlstone);
+		GameRegistry.addShapelessRecipe(new ItemStack(pearlstone, 1),  ModItems.dustPearl, ItemStacks.stone);
+		GameRegistry.addShapelessRecipe(new ItemStack(pearlCobblestone, 1),  ModItems.dustPearl, ItemStacks.cobblestone);
+		GameRegistry.addShapelessRecipe(new ItemStack(pearlstoneBrick, 1),  ModItems.dustPearl, ItemStacks.stoneBrick);
+		GameRegistry.addShapelessRecipe(new ItemStack(blackPearlstone, 1),  ModItems.dustBlackPearl, ItemStacks.stone);
+		GameRegistry.addShapelessRecipe(new ItemStack(blackPearlCobblestone, 1),  ModItems.dustBlackPearl, ItemStacks.cobblestone);
+		GameRegistry.addShapelessRecipe(new ItemStack(blackPearlstoneBrick, 1),  ModItems.dustBlackPearl, ItemStacks.stoneBrick);
 	}
 
 	public static void initLanguageRegistry() {

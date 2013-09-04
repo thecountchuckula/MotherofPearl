@@ -1,6 +1,7 @@
 package tcc.MotherOfPearl.items;
 
 import tcc.MotherOfPearl.tools.ModTools;
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -17,6 +18,14 @@ public class ModItems {
     public static Item shell;
     public static Item pearlDiamond;
     public static Item blackPearlDiamond;
+    public static Item dustPearl;
+    public static Item dustBlackPearl;
+    public static Item dustIron;
+    public static Item dustGold;
+    public static Item mortar;
+    public static Item pestle;
+    public static Item magnificentPearl;
+    public static Item dustStrange;
 
     public static void init() {
         defItems();
@@ -32,6 +41,14 @@ public class ModItems {
         shell = new ItemShell(MOPConfiguration.shellID);
         pearlDiamond = new ItemPearlDiamond(MOPConfiguration.pearlDiamondID);
         blackPearlDiamond = new ItemBlackPearlDiamond(MOPConfiguration.blackPearlDiamondID);
+        dustPearl = new ItemDustPearl(MOPConfiguration.dustPearlID);
+        dustBlackPearl = new ItemDustBlackPearl(MOPConfiguration.dustBlackPearlID);
+        dustIron = new ItemDustIron(MOPConfiguration.dustIronID);
+        dustGold = new ItemDustGold(MOPConfiguration.dustGoldID);
+        mortar = new ItemMortar(MOPConfiguration.mortarID);
+        pestle = new ItemPestle(MOPConfiguration.pestleID);
+        magnificentPearl = new ItemMagnificentPearl(MOPConfiguration.magnificentPearlID);
+        dustStrange = new ItemDustStrange(MOPConfiguration.dustStrangeID);
     }
 
     public static void initGameRegistry() {
@@ -47,8 +64,26 @@ public class ModItems {
         // (If only used in the crafting recipe.)
         // Thank you to DeverionX for the great tutorial on MinecraftForums.
         GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), ItemStacks.oyster, ItemStacks.knifePearl);
+        //adding a (fairly less efficient) way to get pearls w/o pearling knife.
+        GameRegistry.addShapelessRecipe(new ItemStack(pearl, 1), ItemStacks.oyster, ItemStacks.stone);
         //Using the Pearling Knife to make pearls from Oysters. Again 30 Uses makes 240 Pearls (@8 pearls for each use)
         GameRegistry.addRecipe(new ItemStack(pearl, 8), "yyy", "yxy", "yyy", 'x', ItemStacks.knifePearl, 'y', oyster);
+        GameRegistry.addShapelessRecipe(new ItemStack(dustIron, 2), ItemStacks.oreIron, ItemStacks.mortarAndPestle);
+        GameRegistry.addShapelessRecipe(new ItemStack(dustGold, 2), ItemStacks.oreGold, ItemStacks.mortarAndPestle);
+        GameRegistry.addShapelessRecipe(new ItemStack(dustPearl, 2), pearl, ItemStacks.mortarAndPestle);
+        GameRegistry.addShapelessRecipe(new ItemStack(dustBlackPearl, 2), blackPearl, ItemStacks.mortarAndPestle);
+        GameRegistry.addShapelessRecipe(new ItemStack(Block.sand, 2), ItemStacks.cobblestone, ItemStacks.mortarAndPestle);
+        GameRegistry.addSmelting(dustIron.itemID, ItemStacks.ingotIron, 0.1f);
+        GameRegistry.addSmelting(dustGold.itemID, ItemStacks.ingotGold, 0.1f);
+        GameRegistry.addRecipe(new ItemStack(pestle, 1), " s", "d ", 's', ItemStacks.stick, 'd', ItemStacks.diamond);
+        GameRegistry.addRecipe(new ItemStack(mortar, 1), "d d", " d ", 'd', ItemStacks.diamond);
+        GameRegistry.addSmelting(dustStrange.itemID, new ItemStack(magnificentPearl), 0.5f);
+        GameRegistry.addRecipe(new ItemStack(dustStrange, 1), "rrr", "pxp", "iii", 'r', ItemStacks.redstone, 'p', ModItems.dustPearl, 'x', ItemStacks.blazePowder, 'i', ModItems.dustIron);
+        GameRegistry.addRecipe(ItemStacks.cookedBeef, "fff", "fpf", "fff", 'f', ItemStacks.beef, 'p', ItemStacks.portableCooker);
+        GameRegistry.addRecipe(ItemStacks.cookedPork, "fff", "fpf", "fff", 'f', ItemStacks.pork, 'p', ItemStacks.portableCooker);
+        GameRegistry.addRecipe(ItemStacks.bakedPotato, "fff", "fpf", "fff", 'f', ItemStacks.potato, 'p', ItemStacks.portableCooker);
+        GameRegistry.addRecipe(ItemStacks.cookedFish, "fff", "fpf", "fff", 'f', ItemStacks.fish, 'p', ItemStacks.portableCooker);
+        GameRegistry.addRecipe(ItemStacks.cookedChicken, "fff", "fpf", "fff", 'f', ItemStacks.chicken, 'p', ItemStacks.portableCooker);
     }
 
     public static void initLanguageRegistry() {
@@ -59,6 +94,14 @@ public class ModItems {
         LanguageRegistry.addName(shell, "Shell");
         LanguageRegistry.addName(pearlDiamond, "Pearly Diamond");
         LanguageRegistry.addName(blackPearlDiamond, "Black Pearly Diamond"); 
+        LanguageRegistry.addName(dustPearl, "Pearl Dust");
+        LanguageRegistry.addName(dustBlackPearl, "Black Pearl Dust");
+        LanguageRegistry.addName(dustIron, "Iron Dust");
+        LanguageRegistry.addName(dustGold, "Gold Dust");
+        LanguageRegistry.addName(mortar, "Mortar");
+        LanguageRegistry.addName(pestle, "Pestle");
+        LanguageRegistry.addName(dustStrange, "Strange Dust");
+        LanguageRegistry.addName(magnificentPearl, "Magnificent Pearl (Hot Item)");
     }
 
 }

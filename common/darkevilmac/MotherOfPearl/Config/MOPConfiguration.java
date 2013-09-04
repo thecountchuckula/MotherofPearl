@@ -16,6 +16,16 @@ public class MOPConfiguration {
     public static int pearlDiamondID;
     public static int pearlIgniterID;
     public static int pearlPortalPlacerID;
+    public static int dustIronID;
+    public static int dustGoldID;
+    public static int dustPearlID;
+    public static int dustBlackPearlID;
+    public static int mortarID;
+    public static int pestleID;
+    public static int mortarAndPestleID;
+    public static int portableCookerID;
+    public static int dustStrangeID;
+    public static int magnificentPearlID;
 
     public static int shovelPearlID;
     public static int swordPearlID;
@@ -106,6 +116,18 @@ public class MOPConfiguration {
         chestplateBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Chestplate", 5130).getInt();
         helmetBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Helmet", 5131).getInt();
         leggingsBlackPearlDiamondID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Black Pearly Diamond Leggings", 5132).getInt();
+        //Mortar, Pestle, and Dusts
+
+        dustIronID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Iron Dust", 5133).getInt();
+        dustGoldID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Gold Dust", 5134).getInt();
+        dustPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pearl Dust", 5135).getInt();
+        mortarID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Mortar", 5136).getInt();
+        pestleID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Pestle", 5137).getInt();
+        mortarAndPestleID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Mortar And Pestle", 5138).getInt();
+        dustBlackPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "BlackPearl Dust", 5139).getInt();
+        portableCookerID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Portable Cooker", 5140).getInt();
+        dustStrangeID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Strange Dust", 5141).getInt();
+        magnificentPearlID = ModMain.cfg.get(Configuration.CATEGORY_ITEM, "Magnificent Pearl", 5142).getInt();
         
         // Blocks
 
