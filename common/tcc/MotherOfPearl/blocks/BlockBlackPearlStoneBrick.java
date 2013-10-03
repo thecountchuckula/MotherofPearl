@@ -3,7 +3,7 @@ package tcc.MotherOfPearl.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import darkevilmac.MotherOfPearl.lib.Reference;
 
 public class BlockBlackPearlStoneBrick extends Block {
@@ -14,7 +14,7 @@ public class BlockBlackPearlStoneBrick extends Block {
         this.setUnlocalizedName("blackPearlstoneBrick");
         this.setHardness(1.0F);
         this.setStepSound(soundStoneFootstep);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
     }
 
     @Override

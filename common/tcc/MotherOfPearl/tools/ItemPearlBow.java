@@ -11,31 +11,27 @@ import net.minecraft.item.ItemBow;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
-import net.minecraftforge.common.EnumHelper;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.event.entity.player.ArrowNockEvent;
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import darkevilmac.MotherOfPearl.lib.Reference;
 
 public class ItemPearlBow extends ItemBow {
 
-    
     @SideOnly(Side.CLIENT)
     private Icon icon0;
     private Icon icon1;
     private Icon icon2;
-    
-    
-    
+
     public ItemPearlBow(int par1) {
         super(par1);
         maxStackSize = 1;
         // Lasts longer
         this.setMaxDamage(512);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setUnlocalizedName("bowPearl");
     }
 
@@ -151,12 +147,12 @@ public class ItemPearlBow extends ItemBow {
     public int getItemEnchantability() {
         return 10;
     }
-    
+
     public String STANDBY = Reference.MOD_ID.toLowerCase() + ":bowPearl_standby";
     public String TEXTURE0 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_0";
     public String TEXTURE1 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_1";
     public String TEXTURE2 = Reference.MOD_ID.toLowerCase() + ":bowPearl_pulling_2";
-    
+
     @Override
     @SideOnly(Side.CLIENT)
     public void registerIcons(IconRegister par1IconRegister) {
@@ -165,24 +161,20 @@ public class ItemPearlBow extends ItemBow {
         icon1 = par1IconRegister.registerIcon(TEXTURE1);
         icon2 = par1IconRegister.registerIcon(TEXTURE2);
     }
+
     @Override
     @SideOnly(Side.CLIENT)
-    public Icon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining)
-    {
-     if(player.getItemInUse() == null) return this.itemIcon;
-            int Pulling = stack.getMaxItemUseDuration() - useRemaining;
-            if (Pulling >= 18)
-            {
-             return icon2;
-            }
-            else if (Pulling > 13)
-            {
-             return icon1;
-            }
-            else if (Pulling > 0)
-            {
-             return icon0;
-            }                         
-            return itemIcon;
-}
+    public Icon getIcon(ItemStack stack, int renderPass, EntityPlayer player, ItemStack usingItem, int useRemaining) {
+        if (player.getItemInUse() == null)
+            return this.itemIcon;
+        int Pulling = stack.getMaxItemUseDuration() - useRemaining;
+        if (Pulling >= 18) {
+            return icon2;
+        } else if (Pulling > 13) {
+            return icon1;
+        } else if (Pulling > 0) {
+            return icon0;
+        }
+        return itemIcon;
+    }
 }
