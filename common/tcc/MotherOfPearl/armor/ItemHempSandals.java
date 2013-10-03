@@ -6,7 +6,7 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import darkevilmac.MotherOfPearl.lib.Reference;
@@ -17,7 +17,7 @@ public class ItemHempSandals extends ItemArmor {
         super(par1, par2EnumArmorMaterial, par3, par4);
         // TODO Auto-generated constructor stub
         this.setMaxStackSize(1);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setUnlocalizedName("hempSandals");
     }
 

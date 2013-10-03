@@ -6,7 +6,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import tcc.MotherOfPearl.items.ModItems;
 
 public class BlockOysterClay extends Block {
@@ -15,7 +15,7 @@ public class BlockOysterClay extends Block {
         super(par1, par2Material);
         this.setUnlocalizedName("clayOyster");
         this.setHardness(0.5F);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setStepSound(Block.blockClay.stepSound);
     }
 

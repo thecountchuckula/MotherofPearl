@@ -1,6 +1,6 @@
 package tcc.MotherOfPearl.items;
 
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import darkevilmac.MotherOfPearl.utils.AutoTextureFoodItem;
 
 public class ItemOysterMeat extends AutoTextureFoodItem {
@@ -9,7 +9,7 @@ public class ItemOysterMeat extends AutoTextureFoodItem {
         super(par1, saturationModifier, alwaysEdible);
         // TODO Auto-generated constructor stub
         this.setMaxStackSize(64);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setUnlocalizedName("oysterMeat");
     }
 
