@@ -24,7 +24,6 @@ public class ModTools {
     public static EnumToolMaterial pearlShovel = EnumHelper.addToolMaterial("PearlShovel", 2, 256, 2f, 3f, 25);
     public static EnumToolMaterial pearlSword = EnumHelper.addToolMaterial("PearlSword", 2, 256, 1f, 2f, 25);
     public static EnumToolMaterial pearlKnife = EnumHelper.addToolMaterial("PearlKnife", 2, 1000, .5f, 1f, 25);
-    
 
     public static void init() {
         defTools();

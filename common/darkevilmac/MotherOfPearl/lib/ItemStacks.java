@@ -3,14 +3,13 @@ package darkevilmac.MotherOfPearl.lib;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import tcc.MotherOfPearl.Main;
 import tcc.MotherOfPearl.armor.ModArmor;
 import tcc.MotherOfPearl.blocks.ModBlocks;
 import tcc.MotherOfPearl.items.ModItems;
 import tcc.MotherOfPearl.tools.ModTools;
 
 public class ItemStacks {
-	public static final int WILDCARD_VALUE = Short.MAX_VALUE;
+    public static final int WILDCARD_VALUE = Short.MAX_VALUE;
     public static final ItemStack inkSac = new ItemStack(Item.dyePowder, 1, 0);
     public static final ItemStack stick = new ItemStack(Item.stick, 1, 0);
     public static final ItemStack wheat = new ItemStack(Item.wheat, 1, 0);
@@ -25,7 +24,7 @@ public class ItemStacks {
     public static final ItemStack diamond = new ItemStack(Item.diamond, 1, 0);
     public static final ItemStack matches = new ItemStack(Item.flintAndSteel, 1, 0);
     public static final ItemStack obsidian = new ItemStack(Block.obsidian, 1, 0);
-    public static final ItemStack lighter = new ItemStack(Main.PearlFlintAndSteel, 1, 0);
+    public static final ItemStack lighter = new ItemStack(ModItems.pearlIgniter, 1, 0);
     public static final ItemStack sand = new ItemStack(Block.sand, 1, 0);
     public static final ItemStack oreIron = new ItemStack(Block.oreIron, 1, 0);
     public static final ItemStack oreGold = new ItemStack(Block.oreGold, 1, 0);
@@ -41,8 +40,8 @@ public class ItemStacks {
     public static final ItemStack potato = new ItemStack(Item.potato, 1, 0);
     public static final ItemStack fish = new ItemStack(Item.fishRaw, 1, 0);
     public static final ItemStack chicken = new ItemStack(Item.chickenRaw, 1, 0);
-    
-    //MopArmor
+
+    // MopArmor
     public static final ItemStack helmetPearl = new ItemStack(ModArmor.helmetPearl, 1, 0);
     public static final ItemStack chestplatePearl = new ItemStack(ModArmor.chestplatePearl, 1, 0);
     public static final ItemStack leggingsPearl = new ItemStack(ModArmor.leggingsPearl, 1, 0);
@@ -55,7 +54,7 @@ public class ItemStacks {
     public static final ItemStack braShell = new ItemStack(ModArmor.braShell, 1, 0);
     public static final ItemStack skirtGrass = new ItemStack(ModArmor.skirtGrass, 1, 0);
     public static final ItemStack hempSandals = new ItemStack(ModArmor.hempSandals, 1, 0);
-    //MopBlocks
+    // MopBlocks
     public static final ItemStack pearlCobblestone = new ItemStack(ModBlocks.pearlCobblestone, 1, 0);
     public static final ItemStack pearlstone = new ItemStack(ModBlocks.pearlstone, 1, 0);
     public static final ItemStack blackPearlCobblestone = new ItemStack(ModBlocks.blackPearlCobblestone, 1, 0);
@@ -72,7 +71,7 @@ public class ItemStacks {
     public static final ItemStack shell = new ItemStack(ModItems.shell, 1, 0);
     public static final ItemStack blackPearlDiamond = new ItemStack(ModItems.blackPearlDiamond, 1, 0);
     public static final ItemStack pearlDiamond = new ItemStack(ModItems.pearlDiamond, 1, 0);
-    //MopTools
+    // MopTools
     public static final ItemStack shovelPearl = new ItemStack(ModTools.shovelPearl, 1, 0);
     public static final ItemStack shovelBlackPearl = new ItemStack(ModTools.shovelBlackPearl, 1, 0);
     public static final ItemStack swordPearl = new ItemStack(ModTools.swordPearl, 1, 0);
@@ -81,5 +80,5 @@ public class ItemStacks {
     public static final ItemStack knifePearl = new ItemStack(ModTools.knifePearl, 1, WILDCARD_VALUE);
     public static final ItemStack mortarAndPestle = new ItemStack(ModTools.mortarAndPestle, 1, WILDCARD_VALUE);
     public static final ItemStack portableCooker = new ItemStack(ModTools.portableCooker, 1, WILDCARD_VALUE);
-    
+
 }

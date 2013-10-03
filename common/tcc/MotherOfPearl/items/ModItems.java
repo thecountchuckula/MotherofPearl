@@ -1,6 +1,5 @@
 package tcc.MotherOfPearl.items;
 
-import tcc.MotherOfPearl.tools.ModTools;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -11,6 +10,8 @@ import darkevilmac.MotherOfPearl.lib.ItemStacks;
 
 public class ModItems {
 
+    public static Item pearlIgniter;
+    public static Item pearlPortalPlacer;
     public static Item blackPearl;
     public static Item oyster;
     public static Item oysterMeat;
@@ -34,6 +35,8 @@ public class ModItems {
     }
 
     public static void defItems() {
+        pearlIgniter = new ItemPearlIgniter(MOPConfiguration.pearlIgniterID);
+        pearlPortalPlacer = new ItemPortalPlacer(MOPConfiguration.pearlPortalPlacerID);
         blackPearl = new ItemBlackPearl(MOPConfiguration.blackPearlID);
         oyster = new ItemOyster(MOPConfiguration.oysterID);
         oysterMeat = new ItemOysterMeat(MOPConfiguration.oysterMeatID, true, 4);
@@ -60,13 +63,16 @@ public class ModItems {
         GameRegistry.addSmelting(oyster.itemID, new ItemStack(oysterMeat), 0.1f);
         GameRegistry.addShapelessRecipe(ItemStacks.blackPearlDiamond, ItemStacks.blackPearl, ItemStacks.diamond);
         GameRegistry.addShapelessRecipe(ItemStacks.pearlDiamond, ItemStacks.pearl, ItemStacks.diamond);
-        // Uses Pearling Knife to split an oyster into two shells. Gets 30 uses, making a total of 60 shells.
+        // Uses Pearling Knife to split an oyster into two shells. Gets 30 uses,
+        // making a total of 60 shells.
         // (If only used in the crafting recipe.)
         // Thank you to DeverionX for the great tutorial on MinecraftForums.
         GameRegistry.addShapelessRecipe(new ItemStack(shell, 2), ItemStacks.oyster, ItemStacks.knifePearl);
-        //adding a (fairly less efficient) way to get pearls w/o pearling knife.
+        // adding a (fairly less efficient) way to get pearls w/o pearling
+        // knife.
         GameRegistry.addShapelessRecipe(new ItemStack(pearl, 1), ItemStacks.oyster, ItemStacks.stone);
-        //Using the Pearling Knife to make pearls from Oysters. Again 30 Uses makes 240 Pearls (@8 pearls for each use)
+        // Using the Pearling Knife to make pearls from Oysters. Again 30 Uses
+        // makes 240 Pearls (@8 pearls for each use)
         GameRegistry.addRecipe(new ItemStack(pearl, 8), "yyy", "yxy", "yyy", 'x', ItemStacks.knifePearl, 'y', oyster);
         GameRegistry.addShapelessRecipe(new ItemStack(dustIron, 2), ItemStacks.oreIron, ItemStacks.mortarAndPestle);
         GameRegistry.addShapelessRecipe(new ItemStack(dustGold, 2), ItemStacks.oreGold, ItemStacks.mortarAndPestle);
@@ -87,13 +93,15 @@ public class ModItems {
     }
 
     public static void initLanguageRegistry() {
+        LanguageRegistry.addName(pearlIgniter, "Pearl Igniter");
+        LanguageRegistry.addName(pearlPortalPlacer, "Pearl Portal Placer");
         LanguageRegistry.addName(blackPearl, "Black Pearl");
         LanguageRegistry.addName(oyster, "Oyster");
         LanguageRegistry.addName(oysterMeat, "Oyster Meat");
         LanguageRegistry.addName(pearl, "Pearl");
         LanguageRegistry.addName(shell, "Shell");
         LanguageRegistry.addName(pearlDiamond, "Pearly Diamond");
-        LanguageRegistry.addName(blackPearlDiamond, "Black Pearly Diamond"); 
+        LanguageRegistry.addName(blackPearlDiamond, "Black Pearly Diamond");
         LanguageRegistry.addName(dustPearl, "Pearl Dust");
         LanguageRegistry.addName(dustBlackPearl, "Black Pearl Dust");
         LanguageRegistry.addName(dustIron, "Iron Dust");

@@ -3,7 +3,7 @@ package tcc.MotherOfPearl.tools;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import tcc.MotherOfPearl.items.ModItems;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,7 +14,7 @@ public class ItemBlackPearlSword extends ItemSword {
     public ItemBlackPearlSword(int par1) {
         super(par1, ModTools.pearlSword);
         maxStackSize = 1;
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setUnlocalizedName("swordBlackPearl");
     }
 

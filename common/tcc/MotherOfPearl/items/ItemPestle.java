@@ -1,6 +1,6 @@
 package tcc.MotherOfPearl.items;
 
-import tcc.MotherOfPearl.ModMain;
+import tcc.MotherOfPearl.MotherOfPearl;
 import darkevilmac.MotherOfPearl.utils.AutoTextureItem;
 
 public class ItemPestle extends AutoTextureItem {
@@ -9,7 +9,7 @@ public class ItemPestle extends AutoTextureItem {
         super(par1);
         // TODO Auto-generated constructor stub
         this.setMaxStackSize(64);
-        this.setCreativeTab(ModMain.tabMoP);
+        this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setUnlocalizedName("pestle");
     }
 
