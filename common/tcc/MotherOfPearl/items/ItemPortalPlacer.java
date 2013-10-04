@@ -1,5 +1,6 @@
 package tcc.MotherOfPearl.items;
 
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -97,8 +98,9 @@ public class ItemPortalPlacer extends Item {
         return true;
     }
 
+    @Override
     @SideOnly(Side.CLIENT)
-    protected String func_111208_A() {
-        return Reference.MOD_TEXTURE_ID + getUnlocalizedName().substring(5);
+    public void registerIcons(IconRegister par1IconRegister) {
+        itemIcon = par1IconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
     }
 }
