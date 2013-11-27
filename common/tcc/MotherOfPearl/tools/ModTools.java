@@ -55,7 +55,8 @@ public class ModTools {
         GameRegistry.addRecipe(new ItemStack(bowPearl, 1), " xz", "y z", " xz", 'x', ItemStacks.stick, 'y', ItemStacks.pearl, 'z', ItemStacks.string);
         GameRegistry.addRecipe(new ItemStack(knifePearl, 1), "y", "x", 'x', ItemStacks.stick, 'y', ModItems.pearl);
         GameRegistry.addRecipe(new ItemStack(mortarAndPestle, 1), "y", "x", 'x', ModItems.mortar, 'y', ModItems.pestle);
-        GameRegistry.addRecipe(ItemStacks.lighter, "ppp", "pfp", "spp", 'f', ItemStacks.matches, 'p', ModItems.pearl, 's', ItemStacks.stick);
+        //Buggy Fire Use creative Portal Placer
+        //GameRegistry.addRecipe(ItemStacks.lighter, "  p", " f ", "s  ", 'f', ItemStacks.matches, 'p', ModItems.pearlDiamond, 's', ItemStacks.stick);
         GameRegistry.addRecipe(new ItemStack(portableCooker, 1), "b", "m", "b", 'b', ModItems.mortar, 'm', ModItems.magnificentPearl);
     }
 

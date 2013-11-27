@@ -2,6 +2,8 @@ package tcc.MotherOfPearl.blocks;
 
 import java.util.Random;
 
+import tcc.MotherOfPearl.MotherOfPearl;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFire;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -16,7 +18,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import darkevilmac.MotherOfPearl.lib.Reference;
 
 public class BlockPearlFire extends BlockFire {
-    private int[] chanceToEncourageFire = new int[256];
+    private int[] chanceToEncourageFire = new int[0];
     private int[] abilityToCatchFire = new int[256];
 
     @SideOnly(Side.CLIENT)
@@ -25,7 +27,7 @@ public class BlockPearlFire extends BlockFire {
     public BlockPearlFire(int par1) {
         super(par1);
         setTickRandomly(true);
-        setCreativeTab(CreativeTabs.tabMaterials);
+        //setCreativeTab(MotherOfPearl.tabMoP);
         setUnlocalizedName("pearlFire");
     }
 

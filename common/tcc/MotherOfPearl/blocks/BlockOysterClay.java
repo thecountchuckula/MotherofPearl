@@ -36,7 +36,7 @@ public class BlockOysterClay extends Block {
      */
     @Override
     public int idDropped(int par1, Random par2Random, int par3) {
-        int quickvar = par2Random.nextInt(25) + 1;
+        int quickvar = par2Random.nextInt(12) + 1;
         if (quickvar <= 1)
             return ModItems.oyster.itemID;
         else

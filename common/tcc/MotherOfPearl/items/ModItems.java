@@ -3,6 +3,8 @@ package tcc.MotherOfPearl.items;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import tcc.MotherOfPearl.tools.ItemPearlIgniter;
+import tcc.MotherOfPearl.tools.ItemPortalPlacer;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import darkevilmac.MotherOfPearl.Config.MOPConfiguration;
@@ -60,9 +62,12 @@ public class ModItems {
 
     public static void initCrafting() {
         GameRegistry.addRecipe(new ItemStack(blackPearl, 8), "yyy", "yby", "yyy", 'b', ItemStacks.inkSac, 'y', pearl);
+        GameRegistry.addRecipe(new ItemStack(dustBlackPearl, 8), "yyy", "yby", "yyy", 'b', ItemStacks.inkSac, 'y', dustPearl);
         GameRegistry.addSmelting(oyster.itemID, new ItemStack(oysterMeat), 0.1f);
         GameRegistry.addShapelessRecipe(ItemStacks.blackPearlDiamond, ItemStacks.blackPearl, ItemStacks.diamond);
+        GameRegistry.addShapelessRecipe(ItemStacks.blackPearlDiamond, ItemStacks.dustBlackPearl, ItemStacks.diamond);
         GameRegistry.addShapelessRecipe(ItemStacks.pearlDiamond, ItemStacks.pearl, ItemStacks.diamond);
+        GameRegistry.addShapelessRecipe(ItemStacks.pearlDiamond, ItemStacks.dustPearl, ItemStacks.diamond);
         // Uses Pearling Knife to split an oyster into two shells. Gets 30 uses,
         // making a total of 60 shells.
         // (If only used in the crafting recipe.)
@@ -90,6 +95,7 @@ public class ModItems {
         GameRegistry.addRecipe(ItemStacks.bakedPotato, "fff", "fpf", "fff", 'f', ItemStacks.potato, 'p', ItemStacks.portableCooker);
         GameRegistry.addRecipe(ItemStacks.cookedFish, "fff", "fpf", "fff", 'f', ItemStacks.fish, 'p', ItemStacks.portableCooker);
         GameRegistry.addRecipe(ItemStacks.cookedChicken, "fff", "fpf", "fff", 'f', ItemStacks.chicken, 'p', ItemStacks.portableCooker);
+        GameRegistry.addRecipe(ItemStacks.oysterMeat, "fff", "fpf", "fff", 'f', ItemStacks.oyster, 'p', ItemStacks.portableCooker);
     }
 
     public static void initLanguageRegistry() {

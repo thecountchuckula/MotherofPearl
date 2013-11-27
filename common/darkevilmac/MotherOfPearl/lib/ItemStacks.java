@@ -61,13 +61,15 @@ public class ItemStacks {
     public static final ItemStack blackPearlstone = new ItemStack(ModBlocks.blackPearlstone, 1, 0);
     public static final ItemStack pearlstoneBrick = new ItemStack(ModBlocks.pearlstoneBrick, 1, 0);
     public static final ItemStack blackPearlstoneBrick = new ItemStack(ModBlocks.blackPearlstoneBrick, 1, 0);
-    public static final ItemStack clayOyster = new ItemStack(ModBlocks.clayOyster, 1, 0);
-    public static final ItemStack classicClay = new ItemStack(ModBlocks.classicClay, 1, 0);
+    //public static final ItemStack clayOyster = new ItemStack(ModBlocks.clayOyster, 1, 0);
+    //public static final ItemStack classicClay = new ItemStack(ModBlocks.classicClay, 1, 0);
     // MopItems
     public static final ItemStack oyster = new ItemStack(ModItems.oyster, 1, 0);
     public static final ItemStack oysterMeat = new ItemStack(ModItems.oysterMeat, 1, 0);
     public static final ItemStack blackPearl = new ItemStack(ModItems.blackPearl, 1, 0);
+    public static final ItemStack dustBlackPearl = new ItemStack(ModItems.dustBlackPearl, 1, 0);
     public static final ItemStack pearl = new ItemStack(ModItems.pearl, 1, 0);
+    public static final ItemStack dustPearl = new ItemStack(ModItems.dustPearl, 1, 0);
     public static final ItemStack shell = new ItemStack(ModItems.shell, 1, 0);
     public static final ItemStack blackPearlDiamond = new ItemStack(ModItems.blackPearlDiamond, 1, 0);
     public static final ItemStack pearlDiamond = new ItemStack(ModItems.pearlDiamond, 1, 0);
