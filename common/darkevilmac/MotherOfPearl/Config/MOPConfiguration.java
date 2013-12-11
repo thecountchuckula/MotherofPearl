@@ -148,8 +148,8 @@ public class MOPConfiguration {
         blackPearlstoneID = cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone", 511).getInt();
         pearlstoneBrickID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Stone Brick", 512).getInt();
         blackPearlstoneBrickID = cfg.get(Configuration.CATEGORY_BLOCK, "Black Pearly Stone Brick", 513).getInt();
-        pearlFireID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Fire", 2000).getInt();
-        pearlPortalID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Portal", 2001).getInt();
+        pearlFireID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Fire", 2270).getInt();
+        pearlPortalID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Portal", 2271).getInt();
         pearlGrassID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Grass", 200).getInt();
         pearlDirtID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Dirt", 201).getInt();
         pearlLeafID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Leaf", 2002).getInt();
