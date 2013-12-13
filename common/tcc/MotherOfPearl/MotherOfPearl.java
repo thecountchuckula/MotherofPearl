@@ -6,6 +6,7 @@ import net.minecraftforge.common.Configuration;
 import tcc.MotherOfPearl.armor.ModArmor;
 import tcc.MotherOfPearl.blocks.ModBlocks;
 import tcc.MotherOfPearl.dimension.Dimension;
+import tcc.MotherOfPearl.enchantment.ModEnchantments;
 import tcc.MotherOfPearl.items.ModItems;
 import tcc.MotherOfPearl.proxy.CommonProxy;
 import tcc.MotherOfPearl.tools.ModTools;
@@ -54,6 +55,7 @@ public class MotherOfPearl {
 
         MOPConfiguration.init();
         ModBlocks.init();
+        ModEnchantments.init();
         ModItems.init();
         ModTools.init();
         ModArmor.init();

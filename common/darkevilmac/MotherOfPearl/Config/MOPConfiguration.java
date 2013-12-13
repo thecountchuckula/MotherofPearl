@@ -75,6 +75,10 @@ public class MOPConfiguration {
     public static int pearlLeafID;
     public static int pearlLogID;
     public static int pearlSaplingID;
+    public static int nightvisionID;
+    public static int angelwingsID;
+    public static int jumpingID;
+    public static int swiftnessID;
 
     public static Configuration cfg = MotherOfPearl.cfg;
 
@@ -155,6 +159,12 @@ public class MOPConfiguration {
         pearlLeafID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Leaf", 2002).getInt();
         pearlLogID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Log", 2003).getInt();
         pearlSaplingID = cfg.get(Configuration.CATEGORY_BLOCK, "Pearly Sapling", 2004).getInt();
+        
+
+        nightvisionID = cfg.get(Configuration.CATEGORY_GENERAL, "Night Vision Enchantment", 10).getInt();
+        angelwingsID = cfg.get(Configuration.CATEGORY_GENERAL, "Angel Wings Enchantment", 11).getInt();
+        jumpingID = cfg.get(Configuration.CATEGORY_GENERAL, "Jumping Enchantment", 12).getInt();
+        swiftnessID = cfg.get(Configuration.CATEGORY_GENERAL, "Swiftness Enchantment", 13).getInt();
 
         cfg.save();
     }
