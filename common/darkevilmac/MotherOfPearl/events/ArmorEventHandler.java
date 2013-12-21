@@ -190,10 +190,11 @@ public void afterDeathUpdate(LivingSpawnEvent event)
 
 @SideOnly(Side.CLIENT)
 @ForgeSubscribe
-public void flight(LivingEvent.LivingUpdateEvent event)
+public void flight(LivingEvent.LivingUpdateEvent event, EntityPlayer player)
 {
 	if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
 		flying = true;
+		player.fallDistance = 0;
 	}
 	if(!Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
 		flying = false;
@@ -216,7 +217,6 @@ public void playerFlying(LivingEvent.LivingUpdateEvent event)
 				//	player.inventory.armorItemInSlot(2).stackSize = player.inventory.armorItemInSlot(2).stackSize-1;
 				//	}
 				player.motionY = .5;
-				player.fallDistance = 0;
 			
 		}
 		else
