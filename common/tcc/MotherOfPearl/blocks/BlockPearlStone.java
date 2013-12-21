@@ -5,6 +5,8 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.world.World;
 import tcc.MotherOfPearl.MotherOfPearl;
 import darkevilmac.MotherOfPearl.lib.Reference;
 
@@ -19,7 +21,6 @@ public class BlockPearlStone extends Block {
         this.setCreativeTab(MotherOfPearl.tabMoP);
         this.setResistance(20.0F);
     }
-
     @Override
     public void registerIcons(IconRegister reg) {
         blockIcon = reg.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));

@@ -131,6 +131,7 @@ public class BlockPearlPortal extends BlockBreakable {
                     par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, ModBlocks.pearlPortal.blockID, 0, 2);
                 }
             }
+        	System.out.println("[MOP] A portal to 'WaterWorld' was created at x" + par2 + ", y" + par3 + ", z" + par4);
             return true;
         }
     }

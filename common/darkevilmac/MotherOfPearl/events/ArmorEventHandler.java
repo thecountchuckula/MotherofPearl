@@ -15,6 +15,9 @@ import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 
 import org.lwjgl.input.Keyboard;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 import tcc.MotherOfPearl.enchantment.ModEnchantments;
 
 public class ArmorEventHandler 
@@ -24,6 +27,7 @@ public class ArmorEventHandler
 	boolean isSwiftness = false;
 	boolean isAngelwings = false;
 	boolean isNightvision = false;
+	boolean flying = false;
 
 	// Inegers, ya idiots
 	int jumpingAmount;
@@ -184,7 +188,17 @@ public void afterDeathUpdate(LivingSpawnEvent event)
 	}
 }
 
-
+@SideOnly(Side.CLIENT)
+@ForgeSubscribe
+public void flight(LivingEvent.LivingUpdateEvent event)
+{
+	if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+		flying = true;
+	}
+	if(!Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
+		flying = false;
+	}
+}
 
 @ForgeSubscribe
 public void playerFlying(LivingEvent.LivingUpdateEvent event)
@@ -193,10 +207,17 @@ public void playerFlying(LivingEvent.LivingUpdateEvent event)
 	{
 		EntityPlayer player = (EntityPlayer) event.entityLiving;
 
-		if(isAngelwings = true && Keyboard.isKeyDown(57) && !player.onGround && angelwingsAmount != 0)
+		if(isAngelwings = true && player.lastTickPosY <= 256 && flying == true && !player.onGround && angelwingsAmount != 0)
 		{
-			player.motionY = 0.5725786;
-			player.fallDistance = 0;
+			
+				//player.inventory.armorItemInSlot(2).damageItem(1, player);
+				//if(player.inventory.armorItemInSlot(2).getItemDamageForDisplay() == 0)
+				//	{
+				//	player.inventory.armorItemInSlot(2).stackSize = player.inventory.armorItemInSlot(2).stackSize-1;
+				//	}
+				player.motionY = .5;
+				player.fallDistance = 0;
+			
 		}
 		else
 		{
@@ -219,5 +240,6 @@ public void playerFlying(LivingEvent.LivingUpdateEvent event)
         }
 	}
 }
+
 
 }
