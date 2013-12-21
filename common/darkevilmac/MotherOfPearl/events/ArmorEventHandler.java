@@ -190,11 +190,10 @@ public void afterDeathUpdate(LivingSpawnEvent event)
 
 @SideOnly(Side.CLIENT)
 @ForgeSubscribe
-public void flight(LivingEvent.LivingUpdateEvent event, EntityPlayer player)
+public void flight(LivingEvent.LivingUpdateEvent event)
 {
 	if(Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
 		flying = true;
-		player.fallDistance = 0;
 	}
 	if(!Keyboard.isKeyDown(Keyboard.KEY_SPACE)){
 		flying = false;
@@ -210,13 +209,8 @@ public void playerFlying(LivingEvent.LivingUpdateEvent event)
 
 		if(isAngelwings = true && player.lastTickPosY <= 256 && flying == true && !player.onGround && angelwingsAmount != 0)
 		{
-			
-				//player.inventory.armorItemInSlot(2).damageItem(1, player);
-				//if(player.inventory.armorItemInSlot(2).getItemDamageForDisplay() == 0)
-				//	{
-				//	player.inventory.armorItemInSlot(2).stackSize = player.inventory.armorItemInSlot(2).stackSize-1;
-				//	}
 				player.motionY = .5;
+				event.entityLiving.fallDistance = 0;
 			
 		}
 		else
